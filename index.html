@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Web oficial de Galicia Whoop League, competición de drones FPV TinyWhoop en Galicia.">
+
+    <title>Galicia Whoop League</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MENÚ SUPERIOR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Galicia Whoop League"
+                >
+
+            </a>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="active">
+                Inicio
+            </a>
+
+            <a href="calendario.html">
+                Calendario
+            </a>
+
+            <a href="clasificacion.html">
+                Clasificación
+            </a>
+
+            <a href="pilotos.html">
+                Pilotos
+            </a>
+
+            <a href="actividades.html">
+                Actividades
+            </a>
+
+            <a href="galeria.html">
+                Galería
+            </a>
+
+            <a href="ediciones.html">
+                Ediciones
+            </a>
+
+            <a href="patrocinadores.html">
+                Patrocinadores
+            </a>
+
+            <a href="normativa.html">
+                Normativa
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             PORTADA
+        ====================================== -->
+
+        <section class="hero">
+
+
+            <!-- VÍDEO FPV DE FONDO -->
+
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+
+                <source
+                    src="videos/Video_nocturno.mp4"
+                    type="video/mp4"
+                >
+
+            </video>
+
+
+
+            <!-- CAPA OSCURA -->
+
+            <div class="hero-overlay"></div>
+
+
+
+            <!-- EFECTOS DE LUZ -->
+
+            <div class="hero-glow glow-one"></div>
+
+            <div class="hero-glow glow-two"></div>
+
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+
+            <div class="hero-content">
+
+
+                <p class="hero-small reveal reveal-1">
+
+                    LIGA GALLEGA DE CARRERAS FPV
+
+                </p>
+
+
+
+                <h1 class="reveal reveal-2">
+
+                    GALICIA
+
+                    <br>
+
+                    <span>
+                        WHOOP
+                    </span>
+
+                    LEAGUE
+
+                </h1>
+
+
+
+                <p class="hero-description reveal reveal-3">
+
+                    Carreras TinyWhoop · Competición · Tecnología · Espectáculo
+
+                </p>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="hero-buttons reveal reveal-4">
+
+
+                    <a
+                        href="calendario.html"
+                        class="btn btn-primary"
+                    >
+
+                        VER CALENDARIO
+
+                    </a>
+
+
+                    <a
+                        href="actividades.html"
+                        class="btn btn-secondary"
+                    >
+
+                        DESCUBRE LA LIGA
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     CUENTA ATRÁS
+                ================================== -->
+
+                <div class="countdown-wrapper reveal reveal-5">
+
+
+                    <p class="countdown-title">
+
+                        PRÓXIMO EVENTO · MARIN GAMING 2026
+
+                    </p>
+
+
+
+                    <div class="countdown">
+
+
+                        <!-- DÍAS -->
+
+                        <div class="countdown-box">
+
+                            <span id="days">
+                                00
+                            </span>
+
+                            <small>
+                                DÍAS
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- HORAS -->
+
+                        <div class="countdown-box">
+
+                            <span id="hours">
+                                00
+                            </span>
+
+                            <small>
+                                HORAS
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- MINUTOS -->
+
+                        <div class="countdown-box">
+
+                            <span id="minutes">
+                                00
+                            </span>
+
+                            <small>
+                                MIN
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- SEGUNDOS -->
+
+                        <div class="countdown-box">
+
+                            <span id="seconds">
+                                00
+                            </span>
+
+                            <small>
+                                SEG
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <p class="countdown-location">
+
+                        📍 Marín · Pontevedra
+
+                        <br>
+
+                        5 y 6 de diciembre de 2026
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INDICADOR DE SCROLL -->
+
+            <div class="scroll-indicator">
+
+                <span>
+                    DESCUBRE MÁS
+                </span>
+
+                <div class="scroll-line"></div>
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <!-- =========================================
+             PRIMERA EDICIÓN
+        ========================================== -->
+
+        <section class="stats-section">
+
+
+            <!-- 2026 GIGANTE DE FONDO -->
+
+            <div class="stats-background-text">
+
+                2026
+
+            </div>
+
+
+
+            <div class="stats-content">
+
+
+                <!-- CABECERA -->
+
+                <div class="stats-heading scroll-reveal">
+
+
+                    <p class="section-eyebrow">
+
+                        GALICIA WHOOP LEAGUE
+
+                    </p>
+
+
+                    <h2>
+
+                        UNA PRIMERA EDICIÓN
+
+                        <br>
+
+                        <span>
+                            QUE MARCÓ EL INICIO
+                        </span>
+
+                    </h2>
+
+
+                    <p class="stats-description">
+
+                        Una temporada recorriendo Galicia,
+                        acercando las carreras FPV a nuevos públicos
+                        y reuniendo pilotos, aficionados, familias
+                        y amantes de la tecnología.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =====================================
+                     ESTADÍSTICAS
+                ====================================== -->
+
+                <div class="stats-grid">
+
+
+                    <!-- CARRERAS -->
+
+                    <div class="stat-card scroll-reveal">
+
+
+                        <span
+                            class="stat-number"
+                            data-target="6"
+                        >
+
+                            0
+
+                        </span>
+
+
+                        <span class="stat-label">
+
+                            CARRERAS
+
+                        </span>
+
+
+                        <p>
+
+                            Una temporada completa de competición.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- PILOTOS -->
+
+                    <div class="stat-card scroll-reveal">
+
+
+                        <div class="stat-number-wrapper">
+
+
+                            <span class="stat-plus">
+
+                                +
+
+                            </span>
+
+
+                            <span
+                                class="stat-number"
+                                data-target="25"
+                            >
+
+                                0
+
+                            </span>
+
+
+                        </div>
+
+
+                        <span class="stat-label">
+
+                            PILOTOS
+
+                        </span>
+
+
+                        <p>
+
+                            Pilotos compitiendo durante la temporada.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- SEDES -->
+
+                    <div class="stat-card scroll-reveal">
+
+
+                        <span
+                            class="stat-number"
+                            data-target="6"
+                        >
+
+                            0
+
+                        </span>
+
+
+                        <span class="stat-label">
+
+                            SEDES
+
+                        </span>
+
+
+                        <p>
+
+                            Diferentes localizaciones acogieron la liga.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- PÚBLICO -->
+
+                    <div class="stat-card scroll-reveal">
+
+
+                        <span class="stat-number infinity-number">
+
+                            +
+
+                        </span>
+
+
+                        <span class="stat-label">
+
+                            MILES DE ASISTENTES
+
+                        </span>
+
+
+                        <p>
+
+                            Público de todas las edades descubriendo el FPV.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =====================================
+                     FINAL DE LA SECCIÓN
+                ====================================== -->
+
+                <div class="stats-footer scroll-reveal">
+
+
+                    <div class="stats-line"></div>
+
+
+                    <p>
+
+                        Esto fue solo el principio.
+
+                    </p>
+
+
+                    <h3>
+
+                        LA SEGUNDA EDICIÓN
+
+                        <br>
+
+                        <span>
+
+                            VA AÚN MÁS LEJOS.
+
+                        </span>
+
+
+                    </h3>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

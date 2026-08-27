@@ -1,0 +1,4317 @@
+/* =============================================
+   GALICIA WHOOP LEAGUE
+   ESTILOS GENERALES
+============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #061018;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+
+/* =============================================
+   MENÚ SUPERIOR
+============================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(2, 9, 14, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(45, 174, 233, 0.18);
+
+    z-index: 1000;
+}
+
+
+
+/* =============================================
+   LOGO
+============================================= */
+
+.logo {
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.logo a {
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.logo img {
+    height: 78px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+.logo img:hover {
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(45, 174, 233, 0.45)
+        );
+}
+
+
+
+/* =============================================
+   NAVEGACIÓN
+============================================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+nav a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    padding: 10px 0;
+
+    transition: color 0.3s ease;
+}
+
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 3px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2daee9;
+
+    box-shadow:
+        0 0 8px rgba(45, 174, 233, 0.7);
+
+    transition: width 0.3s ease;
+}
+
+
+nav a:hover {
+    color: #2daee9;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+nav a.active {
+    color: #2daee9;
+}
+
+
+nav a.active::after {
+    width: 100%;
+}
+
+
+
+/* =============================================
+   PORTADA
+============================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        150px 8%
+        110px;
+
+    overflow: hidden;
+
+    background: #02080c;
+}
+
+
+
+/* =============================================
+   VÍDEO FPV DE FONDO
+============================================= */
+
+.hero-video {
+    position: absolute;
+
+    top: 60px;
+    right: 1%;
+    left: auto;
+
+    width: 65%;
+    height: 82%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+
+    transform: scale(1.03);
+
+    animation:
+        videoZoom 18s ease-in-out infinite alternate;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 70px rgba(0, 0, 0, 0.55);
+
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0, 0, 0, 0.45) 10%,
+            black 24%,
+            black 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0, 0, 0, 0.45) 10%,
+            black 24%,
+            black 100%
+        );
+}
+
+
+@keyframes videoZoom {
+
+    from {
+        transform: scale(1.03);
+    }
+
+    to {
+        transform: scale(1.09);
+    }
+
+}
+
+
+
+/* =============================================
+   CAPA OSCURA SOBRE EL VÍDEO
+============================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(1, 6, 10, 0.98) 0%,
+            rgba(1, 6, 10, 0.95) 32%,
+            rgba(1, 6, 10, 0.55) 52%,
+            rgba(1, 6, 10, 0.10) 75%,
+            rgba(1, 6, 10, 0.03) 100%
+        );
+}
+
+
+
+/* =============================================
+   EFECTOS DE LUZ
+============================================= */
+
+.hero-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+.glow-one {
+    width: 450px;
+    height: 450px;
+
+    left: -180px;
+    top: 22%;
+
+    background:
+        rgba(0, 174, 255, 0.18);
+
+    animation:
+        glowMovementOne 8s ease-in-out infinite alternate;
+}
+
+
+.glow-two {
+    width: 380px;
+    height: 380px;
+
+    right: 8%;
+    bottom: -100px;
+
+    background:
+        rgba(0, 100, 255, 0.12);
+
+    animation:
+        glowMovementTwo 10s ease-in-out infinite alternate;
+}
+
+
+@keyframes glowMovementOne {
+
+    from {
+        transform:
+            translate(0, 0);
+    }
+
+    to {
+        transform:
+            translate(80px, -40px);
+    }
+
+}
+
+
+@keyframes glowMovementTwo {
+
+    from {
+        transform:
+            translate(0, 0);
+    }
+
+    to {
+        transform:
+            translate(-70px, -50px);
+    }
+
+}
+
+
+
+/* =============================================
+   CONTENIDO DE LA PORTADA
+============================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+
+/* =============================================
+   TEXTO PEQUEÑO
+============================================= */
+
+.hero-small {
+    color: #2daee9;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 0 15px rgba(45, 174, 233, 0.45);
+}
+
+
+
+/* =============================================
+   TÍTULO PRINCIPAL
+============================================= */
+
+.hero h1 {
+    font-size:
+        clamp(58px, 7vw, 115px);
+
+    line-height: 0.87;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+.hero h1 span {
+    color: #28a9e8;
+
+    text-shadow:
+        0 0 35px rgba(40, 169, 232, 0.4);
+}
+
+
+
+/* =============================================
+   DESCRIPCIÓN
+============================================= */
+
+.hero-description {
+    margin-top: 30px;
+
+    font-size: 19px;
+
+    line-height: 1.5;
+
+    color: #d3dde2;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+
+
+/* =============================================
+   BOTONES
+============================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 38px;
+}
+
+
+.btn {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        15px 30px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+
+/* BOTÓN PRINCIPAL */
+
+.btn-primary {
+    background: #159bd8;
+
+    color: white;
+
+    box-shadow:
+        0 0 25px rgba(21, 155, 216, 0.25);
+}
+
+
+.btn-primary:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        #25b4f0;
+
+    box-shadow:
+        0 10px 35px rgba(37, 180, 240, 0.4);
+}
+
+
+
+/* BOTÓN SECUNDARIO */
+
+.btn-secondary {
+    color: white;
+
+    border:
+        1px solid rgba(45, 174, 233, 0.65);
+
+    background:
+        rgba(4, 17, 25, 0.48);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.btn-secondary:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(45, 174, 233, 0.17);
+
+    box-shadow:
+        0 10px 30px rgba(45, 174, 233, 0.15);
+}
+
+
+
+/* =============================================
+   CUENTA ATRÁS
+============================================= */
+
+.countdown-wrapper {
+    margin-top: 48px;
+
+    padding-top: 24px;
+
+    max-width: 520px;
+
+    border-top:
+        1px solid rgba(45, 174, 233, 0.25);
+}
+
+
+.countdown-title {
+    color: #2daee9;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 12px rgba(45, 174, 233, 0.35);
+}
+
+
+.countdown {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.countdown-box {
+    width: 98px;
+    height: 92px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 31, 44, 0.86),
+            rgba(3, 14, 21, 0.74)
+        );
+
+    border:
+        1px solid rgba(45, 174, 233, 0.40);
+
+    border-radius: 9px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        inset 0 0 20px rgba(45, 174, 233, 0.04),
+        0 0 20px rgba(0, 0, 0, 0.28);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.countdown-box:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #2daee9;
+
+    box-shadow:
+        0 0 28px rgba(45, 174, 233, 0.22);
+}
+
+
+.countdown-box span {
+    font-size: 37px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px rgba(45, 174, 233, 0.18);
+}
+
+
+.countdown-box small {
+    margin-top: 8px;
+
+    color: #2daee9;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.countdown-location {
+    margin-top: 17px;
+
+    color: #b7c6ce;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =============================================
+   ANIMACIONES DE ENTRADA
+============================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    animation:
+        heroReveal 0.9s forwards;
+
+    animation-timing-function:
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+
+.reveal-1 {
+    animation-delay: 0.15s;
+}
+
+
+.reveal-2 {
+    animation-delay: 0.32s;
+}
+
+
+.reveal-3 {
+    animation-delay: 0.50s;
+}
+
+
+.reveal-4 {
+    animation-delay: 0.68s;
+}
+
+
+.reveal-5 {
+    animation-delay: 0.88s;
+}
+
+
+@keyframes heroReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+
+/* =============================================
+   INDICADOR DE SCROLL
+============================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 6;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.scroll-line {
+    width: 1px;
+
+    height: 35px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #2daee9,
+            transparent
+        );
+
+    animation:
+        scrollMove 1.7s infinite;
+}
+
+
+@keyframes scrollMove {
+
+    0% {
+        transform:
+            scaleY(0);
+
+        transform-origin:
+            top;
+
+        opacity: 0;
+    }
+
+    40% {
+        transform:
+            scaleY(1);
+
+        transform-origin:
+            top;
+
+        opacity: 1;
+    }
+
+    70% {
+        transform:
+            scaleY(1);
+
+        transform-origin:
+            bottom;
+    }
+
+    100% {
+        transform:
+            scaleY(0);
+
+        transform-origin:
+            bottom;
+
+        opacity: 0;
+    }
+
+}
+
+
+
+/* =============================================
+   SECCIONES GENERALES
+   PARA EL RESTO DE PÁGINAS
+============================================= */
+
+.section {
+    min-height: 500px;
+
+    padding:
+        110px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.dark-section {
+    background:
+        #081822;
+}
+
+
+.section-subtitle {
+    color:
+        #2daee9;
+
+    font-size:
+        14px;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        15px;
+}
+
+
+.section h2 {
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            65px
+        );
+
+    margin-bottom:
+        25px;
+}
+
+
+.section-text {
+    max-width:
+        750px;
+
+    color:
+        #aebfc9;
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+}
+
+
+
+/* =============================================
+   PÁGINAS INTERIORES
+============================================= */
+
+.page-section {
+    min-height:
+        100vh;
+
+    padding-top:
+        160px;
+}
+
+
+
+/* =============================================
+   TARJETAS DE CARRERAS
+============================================= */
+
+.race-card {
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin-top:
+        50px;
+
+    padding:
+        30px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        30px;
+
+    background:
+        #0d2533;
+
+    border:
+        1px solid rgba(45, 174, 233, 0.25);
+
+    border-radius:
+        12px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.race-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(45, 174, 233, 0.65);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.race-number {
+    font-size:
+        45px;
+
+    font-weight:
+        900;
+
+    color:
+        #2daee9;
+}
+
+
+.race-info {
+    flex:
+        1;
+
+    text-align:
+        left;
+}
+
+
+.race-info h3 {
+    margin-bottom:
+        8px;
+}
+
+
+.race-info p {
+    color:
+        #91a8b5;
+}
+
+
+.race-location {
+    color:
+        #2daee9;
+
+    font-weight:
+        bold;
+}
+
+
+
+/* =============================================
+   TABLETS Y MÓVILES
+============================================= */
+
+@media (max-width: 1050px) {
+
+    nav {
+        gap:
+            15px;
+    }
+
+
+    nav a {
+        font-size:
+            11px;
+    }
+
+}
+
+
+
+/* =============================================
+   MÓVIL
+============================================= */
+
+@media (max-width: 900px) {
+
+
+    /* MENÚ */
+
+    .navbar {
+        height:
+            82px;
+
+        padding:
+            0 20px;
+    }
+
+
+    .logo {
+        height:
+            74px;
+    }
+
+
+    .logo img {
+        height:
+            70px;
+    }
+
+
+    nav {
+        display:
+            none;
+    }
+
+
+
+    /* PORTADA */
+
+    .hero {
+        min-height:
+            100svh;
+
+        align-items:
+            flex-start;
+
+        padding:
+            125px 24px
+            90px;
+    }
+
+
+    .hero-overlay {
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(2, 8, 12, 0.92),
+                rgba(2, 8, 12, 0.62)
+            ),
+
+            linear-gradient(
+                0deg,
+                rgba(2, 8, 12, 0.65),
+                transparent
+            );
+    }
+
+
+
+    /* TÍTULO */
+
+    .hero h1 {
+        font-size:
+            clamp(
+                50px,
+                16vw,
+                72px
+            );
+
+        letter-spacing:
+            -3px;
+
+        line-height:
+            0.9;
+    }
+
+
+    .hero-small {
+        font-size:
+            10px;
+
+        letter-spacing:
+            3px;
+
+        line-height:
+            1.6;
+    }
+
+
+    .hero-description {
+        font-size:
+            15px;
+
+        line-height:
+            1.6;
+
+        max-width:
+            340px;
+    }
+
+
+
+    /* BOTONES */
+
+    .hero-buttons {
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        width:
+            100%;
+
+        max-width:
+            330px;
+    }
+
+
+    .btn {
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+
+
+    /* CONTADOR */
+
+    .countdown-wrapper {
+        width:
+            100%;
+
+        max-width:
+            350px;
+
+        margin-top:
+            38px;
+    }
+
+
+    .countdown-title {
+        font-size:
+            10px;
+
+        letter-spacing:
+            2px;
+
+        line-height:
+            1.5;
+    }
+
+
+    .countdown {
+        gap:
+            7px;
+
+        flex-wrap:
+            nowrap;
+    }
+
+
+    .countdown-box {
+        width:
+            72px;
+
+        height:
+            75px;
+    }
+
+
+    .countdown-box span {
+        font-size:
+            25px;
+    }
+
+
+    .countdown-box small {
+        font-size:
+            7px;
+
+        letter-spacing:
+            1px;
+    }
+
+
+    .countdown-location {
+        font-size:
+            12px;
+    }
+
+
+
+    /* SCROLL */
+
+    .scroll-indicator {
+        display:
+            none;
+    }
+
+
+
+    /* SECCIONES */
+
+    .section {
+        padding:
+            90px 25px;
+    }
+
+
+    .page-section {
+        padding-top:
+            130px;
+    }
+
+
+
+    /* TARJETAS */
+
+    .race-card {
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .race-info {
+        text-align:
+            center;
+    }
+
+}
+
+
+
+/* =============================================
+   MÓVILES MUY PEQUEÑOS
+============================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size:
+            47px;
+    }
+
+
+    .countdown-box {
+        width:
+            65px;
+
+        height:
+            70px;
+    }
+
+
+    .countdown-box span {
+        font-size:
+            22px;
+    }
+
+}
+
+
+/* =============================================
+   ESTADÍSTICAS PRIMERA EDICIÓN
+============================================= */
+
+.stats-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 130px 8%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(20, 158, 220, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #02080c 0%,
+            #06131c 100%
+        );
+
+    border-top:
+        1px solid rgba(45, 174, 233, 0.15);
+}
+
+
+/* NÚMERO 2026 GIGANTE DE FONDO */
+
+.stats-background-text {
+    position: absolute;
+
+    right: -30px;
+    top: 20px;
+
+    font-size: clamp(180px, 25vw, 450px);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    color:
+        rgba(255, 255, 255, 0.018);
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* CONTENIDO */
+
+.stats-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+}
+
+
+/* CABECERA */
+
+.stats-heading {
+    max-width: 850px;
+
+    margin-bottom: 80px;
+}
+
+
+.section-eyebrow {
+    margin-bottom: 18px;
+
+    color: #2daee9;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+}
+
+
+.stats-heading h2 {
+    font-size:
+        clamp(45px, 6vw, 90px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+}
+
+
+.stats-heading h2 span {
+    color: #2daee9;
+
+    text-shadow:
+        0 0 30px rgba(45, 174, 233, 0.18);
+}
+
+
+.stats-description {
+    max-width: 700px;
+
+    margin-top: 30px;
+
+    color: #9fb2bd;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =============================================
+   GRID DE ESTADÍSTICAS
+============================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* TARJETA */
+
+.stat-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 35px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 34, 47, 0.75),
+            rgba(3, 14, 21, 0.65)
+        );
+
+    border:
+        1px solid rgba(45, 174, 233, 0.20);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* LÍNEA AZUL SUPERIOR */
+
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #159bd8,
+            #52caff
+        );
+
+    transition:
+        width 0.5s ease;
+
+    box-shadow:
+        0 0 15px rgba(45, 174, 233, 0.5);
+}
+
+
+/* HOVER */
+
+.stat-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(45, 174, 233, 0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30);
+}
+
+
+.stat-card:hover::before {
+    width: 100%;
+}
+
+
+/* NÚMEROS */
+
+.stat-number {
+    display: block;
+
+    color: white;
+
+    font-size:
+        clamp(65px, 6vw, 100px);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    text-shadow:
+        0 0 25px rgba(45, 174, 233, 0.12);
+}
+
+
+.stat-number-wrapper {
+    display: flex;
+
+    align-items: flex-start;
+}
+
+
+.stat-plus {
+    margin-right: 5px;
+
+    color: #2daee9;
+
+    font-size: 35px;
+
+    font-weight: 900;
+}
+
+
+.infinity-number {
+    color: #2daee9;
+}
+
+
+/* ETIQUETA */
+
+.stat-label {
+    display: block;
+
+    margin-top: 22px;
+
+    color: #2daee9;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.stat-card p {
+    margin-top: 12px;
+
+    color: #849aa6;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =============================================
+   FINAL DE LA SECCIÓN
+============================================= */
+
+.stats-footer {
+    margin-top: 110px;
+
+    max-width: 750px;
+}
+
+
+.stats-line {
+    width: 70px;
+
+    height: 3px;
+
+    margin-bottom: 30px;
+
+    background: #2daee9;
+
+    box-shadow:
+        0 0 15px rgba(45, 174, 233, 0.5);
+}
+
+
+.stats-footer p {
+    margin-bottom: 10px;
+
+    color: #8da3ae;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+
+.stats-footer h3 {
+    font-size:
+        clamp(35px, 5vw, 65px);
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+
+.stats-footer h3 span {
+    color: #2daee9;
+}
+
+
+/* =============================================
+   ANIMACIONES AL HACER SCROLL
+============================================= */
+
+.scroll-reveal {
+    opacity: 0;
+
+    transform:
+        translateY(55px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+
+.scroll-reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+
+@media (max-width: 1000px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .stats-section {
+        padding:
+            90px 22px;
+    }
+
+
+    .stats-heading {
+        margin-bottom:
+            50px;
+    }
+
+
+    .stats-heading h2 {
+        font-size:
+            45px;
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .stats-description {
+        font-size:
+            15px;
+    }
+
+
+    .stats-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .stat-card {
+        min-height:
+            220px;
+    }
+
+
+    .stat-number {
+        font-size:
+            75px;
+    }
+
+
+    .stats-footer {
+        margin-top:
+            75px;
+    }
+
+}
+
+
+/* =============================================
+   CLASIFICACIÓN GENERAL
+============================================= */
+
+.ranking-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 160px 7% 120px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(45, 174, 233, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #02080c,
+            #06131c
+        );
+}
+
+
+.ranking-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1350px;
+
+    margin: 0 auto;
+}
+
+
+/* 2027 GIGANTE */
+
+.ranking-background-number {
+    position: absolute;
+
+    right: -30px;
+    top: 80px;
+
+    font-size: clamp(180px, 25vw, 430px);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    color: rgba(255, 255, 255, 0.018);
+
+    pointer-events: none;
+}
+
+
+
+/* =============================================
+   CABECERA
+============================================= */
+
+.ranking-heading {
+    margin-bottom: 75px;
+
+    max-width: 850px;
+}
+
+
+.ranking-heading h1 {
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.88;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+
+.ranking-heading h1 span {
+    display: block;
+
+    color: #2daee9;
+
+    text-shadow:
+        0 0 35px rgba(45, 174, 233, 0.22);
+}
+
+
+.ranking-heading > p:last-child {
+    margin-top: 25px;
+
+    color: #91a7b3;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =============================================
+   PODIO TOP 3
+============================================= */
+
+.ranking-podium {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.12fr 1fr;
+
+    align-items: end;
+
+    gap: 18px;
+
+    max-width: 1050px;
+
+    margin: 0 auto 110px;
+}
+
+
+.podium-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(11, 35, 48, 0.85),
+            rgba(3, 14, 21, 0.75)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.podium-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(45, 174, 233, 0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30);
+}
+
+
+/* PRIMER PUESTO MÁS GRANDE */
+
+.podium-first {
+    min-height: 310px;
+
+    border:
+        1px solid rgba(45, 174, 233, 0.50);
+
+    box-shadow:
+        0 0 35px rgba(45, 174, 233, 0.08);
+}
+
+
+.leader-label {
+    position: absolute;
+
+    top: 15px;
+
+    padding: 6px 13px;
+
+    border-radius: 50px;
+
+    background: #2daee9;
+
+    color: #021019;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.podium-position {
+    position: absolute;
+
+    top: 20px;
+    right: 22px;
+
+    color: rgba(255, 255, 255, 0.15);
+
+    font-size: 35px;
+
+    font-weight: 900;
+}
+
+
+.podium-medal {
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(45, 174, 233, 0.08);
+
+    border:
+        1px solid rgba(45, 174, 233, 0.40);
+
+    color: #2daee9;
+
+    font-size: 23px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 0 25px rgba(45, 174, 233, 0.10);
+}
+
+
+.podium-card h3 {
+    font-size: 21px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.podium-points {
+    margin-top: 10px;
+
+    color: #839aa6;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* =============================================
+   TABLA
+============================================= */
+
+.ranking-table-wrapper {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+.ranking-table-title {
+    margin-bottom: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+}
+
+
+.ranking-table-title h2 {
+    font-size: clamp(30px, 4vw, 50px);
+
+    font-weight: 900;
+}
+
+
+.ranking-driver-count {
+    padding: 9px 15px;
+
+    border:
+        1px solid rgba(45, 174, 233, 0.35);
+
+    border-radius: 50px;
+
+    color: #2daee9;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* FILAS */
+
+.ranking-row {
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr 130px;
+
+    align-items: center;
+
+    min-height: 82px;
+
+    margin-bottom: 6px;
+
+    padding: 0 28px;
+
+    background:
+        rgba(8, 27, 38, 0.70);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.045);
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.ranking-row:not(.ranking-header):hover {
+    transform:
+        translateX(7px);
+
+    background:
+        rgba(11, 40, 55, 0.90);
+
+    border-color:
+        rgba(45, 174, 233, 0.30);
+}
+
+
+
+/* CABECERA TABLA */
+
+.ranking-header {
+    min-height: 45px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #607784;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* TOP 3 */
+
+.top-driver {
+    border-left:
+        3px solid #2daee9;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(45, 174, 233, 0.09),
+            rgba(8, 27, 38, 0.70) 35%
+        );
+}
+
+
+
+/* POSICIÓN */
+
+.position {
+    color: #607783;
+
+    font-size: 19px;
+
+    font-weight: 900;
+}
+
+
+.top-driver .position {
+    color: #2daee9;
+}
+
+
+
+/* PILOTO */
+
+.driver {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.driver-number {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(45, 174, 233, 0.08);
+
+    border:
+        1px solid rgba(45, 174, 233, 0.20);
+
+    color: #2daee9;
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+.driver span {
+    color: #e6edf1;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+
+/* PUNTOS */
+
+.points {
+    text-align: right;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 900;
+}
+
+
+.points small {
+    margin-left: 4px;
+
+    color: #607783;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* =============================================
+   CLASIFICACIÓN MÓVIL
+============================================= */
+
+@media (max-width: 700px) {
+
+    .ranking-section {
+        padding:
+            125px 20px 80px;
+    }
+
+
+    .ranking-heading {
+        margin-bottom:
+            55px;
+    }
+
+
+    .ranking-heading h1 {
+        font-size:
+            53px;
+
+        letter-spacing:
+            -3px;
+    }
+
+
+    /* PODIO */
+
+    .ranking-podium {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            10px;
+
+        margin-bottom:
+            80px;
+    }
+
+
+    .podium-first {
+        order:
+            1;
+
+        min-height:
+            230px;
+    }
+
+
+    .podium-second {
+        order:
+            2;
+    }
+
+
+    .podium-third {
+        order:
+            3;
+    }
+
+
+    .podium-card {
+        min-height:
+            190px;
+    }
+
+
+    /* CABECERA */
+
+    .ranking-table-title {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            15px;
+    }
+
+
+    /* TABLA */
+
+    .ranking-row {
+        grid-template-columns:
+            55px 1fr 70px;
+
+        min-height:
+            72px;
+
+        padding:
+            0 12px;
+    }
+
+
+    .ranking-header {
+        min-height:
+            40px;
+
+        font-size:
+            7px;
+    }
+
+
+    .driver {
+        gap:
+            10px;
+    }
+
+
+    .driver-number {
+        display:
+            none;
+    }
+
+
+    .driver span {
+        font-size:
+            12px;
+    }
+
+
+    .position {
+        font-size:
+            15px;
+    }
+
+
+    .points {
+        font-size:
+            19px;
+    }
+
+}
+
+
+/* =============================================
+   PÁGINA EDICIONES
+============================================= */
+
+.seasons-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 160px 7% 120px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(45, 174, 233, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(0, 110, 200, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #02080c,
+            #06131c
+        );
+}
+
+
+.seasons-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1350px;
+
+    margin: 0 auto;
+}
+
+
+/* TEXTO GRANDE DE FONDO */
+
+.seasons-background-text {
+    position: absolute;
+
+    right: -40px;
+    top: 50px;
+
+    font-size: clamp(220px, 35vw, 600px);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.015);
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+
+/* =============================================
+   CABECERA
+============================================= */
+
+.seasons-heading {
+    max-width: 900px;
+
+    margin-bottom: 85px;
+}
+
+
+.seasons-heading h1 {
+    font-size: clamp(60px, 8vw, 115px);
+
+    line-height: 0.88;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+
+.seasons-heading h1 span {
+    display: block;
+
+    color: #2daee9;
+
+    text-shadow:
+        0 0 35px rgba(45, 174, 233, 0.2);
+}
+
+
+.seasons-heading > p:last-child {
+    max-width: 730px;
+
+    margin-top: 28px;
+
+    color: #91a7b3;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =============================================
+   GRID TEMPORADAS
+============================================= */
+
+.seasons-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+
+/* =============================================
+   TARJETA TEMPORADA
+============================================= */
+
+.season-card {
+    position: relative;
+
+    min-height: 560px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: white;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 35, 48, 0.92),
+            rgba(3, 14, 21, 0.92)
+        );
+
+    border:
+        1px solid rgba(45, 174, 233, 0.20);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.season-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(45, 174, 233, 0.13),
+            transparent 35%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+
+.season-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #2daee9,
+            transparent
+        );
+
+    transform: scaleX(0);
+
+    transition: transform 0.5s ease;
+
+    box-shadow:
+        0 0 20px rgba(45, 174, 233, 0.6);
+}
+
+
+.season-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(45, 174, 233, 0.60);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.38);
+}
+
+
+.season-card:hover::before {
+    opacity: 1;
+}
+
+
+.season-card:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+/* =============================================
+   NÚMERO GIGANTE DE TEMPORADA
+============================================= */
+
+.season-number {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color:
+        rgba(255, 255, 255, 0.035);
+
+    font-size: 170px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+
+/* =============================================
+   ESTADO TEMPORADA
+============================================= */
+
+.season-status {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    padding:
+        8px 15px;
+
+    border-radius:
+        30px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+}
+
+
+.season-status.finished {
+    color:
+        #8da4af;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+}
+
+
+.season-status.current {
+    color:
+        #03131d;
+
+    background:
+        #2daee9;
+
+    box-shadow:
+        0 0 18px rgba(45, 174, 233, 0.35);
+}
+
+
+
+/* =============================================
+   CONTENIDO
+============================================= */
+
+.season-content {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+}
+
+
+.season-small {
+    margin-bottom:
+        10px;
+
+    color:
+        #2daee9;
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        3px;
+}
+
+
+.season-content h2 {
+    font-size:
+        clamp(70px, 8vw, 120px);
+
+    line-height:
+        0.9;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -5px;
+}
+
+
+.season-description {
+    max-width:
+        500px;
+
+    margin-top:
+        25px;
+
+    color:
+        #91a7b3;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+}
+
+
+
+/* =============================================
+   ESTADÍSTICAS TEMPORADA
+============================================= */
+
+.season-stats {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        15px;
+
+    margin-top:
+        35px;
+
+    padding-top:
+        25px;
+
+    border-top:
+        1px solid rgba(45, 174, 233, 0.18);
+}
+
+
+.season-stats div {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.season-stats strong {
+    color:
+        white;
+
+    font-size:
+        22px;
+
+    font-weight:
+        900;
+}
+
+
+.season-stats span {
+    margin-top:
+        5px;
+
+    color:
+        #607984;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+}
+
+
+
+/* =============================================
+   ENLACE
+============================================= */
+
+.season-link {
+    margin-top:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    color:
+        #2daee9;
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+}
+
+
+.season-link span {
+    font-size:
+        22px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.season-card:hover
+.season-link span {
+    transform:
+        translateX(8px);
+}
+
+
+
+/* =============================================
+   PIE EDICIONES
+============================================= */
+
+.seasons-footer {
+    margin-top:
+        120px;
+
+    max-width:
+        800px;
+}
+
+
+.seasons-footer p {
+    margin-bottom:
+        12px;
+
+    color:
+        #8096a1;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+}
+
+
+.seasons-footer h3 {
+    font-size:
+        clamp(45px, 6vw, 80px);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -3px;
+}
+
+
+.seasons-footer h3 span {
+    display:
+        block;
+
+    color:
+        #2daee9;
+}
+
+
+
+/* =============================================
+   EDICIONES RESPONSIVE
+============================================= */
+
+@media (max-width: 850px) {
+
+    .seasons-section {
+        padding:
+            130px 22px
+            90px;
+    }
+
+
+    .seasons-heading {
+        margin-bottom:
+            55px;
+    }
+
+
+    .seasons-heading h1 {
+        font-size:
+            58px;
+
+        letter-spacing:
+            -3px;
+    }
+
+
+    .seasons-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .season-card {
+        min-height:
+            480px;
+
+        padding:
+            32px 25px;
+    }
+
+
+    .season-number {
+        font-size:
+            120px;
+    }
+
+
+    .season-content h2 {
+        font-size:
+            80px;
+    }
+
+
+    .seasons-footer {
+        margin-top:
+            80px;
+    }
+
+}
+
+
+/* ==========================================================
+   PRIMERA EDICIÓN · GALICIA WHOOP LEAGUE
+========================================================== */
+
+.edition-page {
+    background: #02080c;
+    color: white;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.edition-hero {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 150px 8% 100px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(45, 174, 233, 0.16),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #02080c,
+            #06131c
+        );
+}
+
+
+.edition-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+.edition-hero-bg {
+    position: absolute;
+
+    right: 2%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: clamp(300px, 40vw, 700px);
+    line-height: 0.8;
+
+    font-weight: 900;
+
+    color: rgba(255, 255, 255, 0.018);
+
+    user-select: none;
+}
+
+
+.edition-eyebrow {
+    margin-bottom: 20px;
+
+    color: #2daee9;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.edition-hero h1 {
+    max-width: 900px;
+
+    font-size: clamp(80px, 10vw, 160px);
+
+    line-height: 0.78;
+
+    letter-spacing: -8px;
+
+    font-weight: 900;
+}
+
+
+.edition-hero h1 span {
+    display: block;
+
+    color: #2daee9;
+}
+
+
+.edition-year {
+    margin-top: 30px;
+
+    color: rgba(255,255,255,0.25);
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    letter-spacing: 12px;
+}
+
+
+.edition-intro {
+    max-width: 680px;
+
+    margin-top: 35px;
+
+    color: #9babb4;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ESTADÍSTICAS */
+
+.edition-main-stats {
+    display: flex;
+
+    gap: 60px;
+
+    margin-top: 55px;
+}
+
+
+.edition-main-stats div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.edition-main-stats strong {
+    color: white;
+
+    font-size: 38px;
+
+    font-weight: 900;
+}
+
+
+.edition-main-stats span {
+    margin-top: 4px;
+
+    color: #607984;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.scroll-edition {
+    position: absolute;
+
+    right: 5%;
+    bottom: 50px;
+
+    color: #607984;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+
+/* ==========================================================
+   CAMPEÓN
+========================================================== */
+
+.champion-section {
+    padding: 140px 8%;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(45,174,233,0.10),
+            transparent 40%
+        ),
+        #030b10;
+}
+
+
+.champion-container {
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+.champion-label {
+    margin-bottom: 25px;
+
+    color: #2daee9;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.champion-main {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 300px;
+
+    padding: 50px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(45,174,233,0.25);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(45,174,233,0.12),
+            rgba(3,12,18,0.95)
+        );
+}
+
+
+.champion-position {
+    position: absolute;
+
+    right: 30px;
+
+    font-size: 280px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    color: rgba(255,255,255,0.025);
+}
+
+
+.champion-info {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.champion-info p {
+    color: #8299a5;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.champion-info h2 {
+    margin-top: 5px;
+
+    font-size: clamp(75px, 10vw, 145px);
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+
+.champion-points {
+    margin-top: 15px;
+
+    color: #2daee9;
+
+    font-size: 35px;
+
+    font-weight: 900;
+}
+
+
+.champion-points span {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.champion-trophy {
+    margin-left: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-right: 100px;
+
+    font-size: 90px;
+}
+
+
+
+/* ==========================================================
+   PODIO FINAL
+========================================================== */
+
+.final-podium {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+
+.final-podium-card {
+    position: relative;
+
+    min-height: 220px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    background:
+        rgba(255,255,255,0.025);
+}
+
+
+.final-podium-card.first {
+    border-color:
+        rgba(45,174,233,0.4);
+
+    background:
+        rgba(45,174,233,0.07);
+}
+
+
+.podium-position {
+    position: absolute;
+
+    top: 5px;
+    right: 20px;
+
+    color: rgba(255,255,255,0.05);
+
+    font-size: 110px;
+
+    font-weight: 900;
+}
+
+
+.podium-medal {
+    font-size: 32px;
+}
+
+
+.final-podium-card h3 {
+    margin-top: 15px;
+
+    font-size: 27px;
+
+    font-weight: 900;
+}
+
+
+.final-podium-card strong {
+    margin-top: 7px;
+
+    color: #2daee9;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* ==========================================================
+   CARRERAS
+========================================================== */
+
+.season-races {
+    padding: 150px 8%;
+
+    background: #02080c;
+}
+
+
+.races-heading {
+    max-width: 1300px;
+
+    margin: 0 auto 120px;
+}
+
+
+.races-heading > p {
+    color: #2daee9;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.races-heading h2 {
+    margin-top: 15px;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.races-heading h2 span {
+    display: block;
+
+    color: #2daee9;
+}
+
+
+
+/* TIMELINE */
+
+.race-timeline {
+    position: relative;
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+.race-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(45,174,233,0.4),
+            rgba(45,174,233,0.4),
+            transparent
+        );
+}
+
+
+
+/* CARRERA */
+
+.history-race {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+    min-height: 600px;
+
+    margin-bottom: 130px;
+}
+
+
+.history-race.reverse
+.history-race-info {
+    order: 2;
+}
+
+
+.history-race.reverse
+.history-race-image {
+    order: 1;
+}
+
+
+.race-line-number {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 4;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #2daee9;
+
+    background: #02080c;
+
+    border:
+        1px solid #2daee9;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 0 30px rgba(45,174,233,0.20);
+}
+
+
+.race-line-number.final {
+    background: #2daee9;
+
+    color: #02080c;
+
+    box-shadow:
+        0 0 35px rgba(45,174,233,0.5);
+}
+
+
+
+/* INFO CARRERA */
+
+.history-race-info {
+    padding: 30px;
+}
+
+
+.race-date {
+    margin-bottom: 12px;
+
+    color: #637985;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.race-label {
+    color: #2daee9;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.history-race-info h3 {
+    margin-top: 10px;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+}
+
+
+.history-race-info h3 span {
+    display: block;
+
+    color: #2daee9;
+}
+
+
+.race-text {
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    color: #879ba5;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+
+/* MINI PODIO */
+
+.mini-podium {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+
+.mini-podium div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid rgba(255,255,255,0.07);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border-radius: 7px;
+}
+
+
+.mini-podium strong {
+    font-size: 12px;
+}
+
+
+
+/* IMAGEN CARRERA */
+
+.history-race-image {
+    position: relative;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071721,
+            #02080c
+        );
+
+    border:
+        1px solid rgba(45,174,233,0.13);
+}
+
+
+.history-race-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.history-race:hover
+.history-race-image img {
+    transform: scale(1.05);
+}
+
+
+.image-number {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding: 9px 13px;
+
+    color: white;
+
+    background:
+        rgba(2,8,12,0.80);
+
+    backdrop-filter:
+        blur(10px);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* GRAN FINAL */
+
+.final-race {
+    margin-bottom: 0;
+}
+
+
+.final-badge {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 9px 15px;
+
+    color: #02080c;
+
+    background: #2daee9;
+
+    border-radius: 30px;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 25px rgba(45,174,233,0.25);
+}
+
+
+
+/* ==========================================================
+   CLASIFICACIÓN HISTÓRICA
+========================================================== */
+
+.historic-ranking {
+    padding: 150px 8%;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(45,174,233,0.10),
+            transparent 30%
+        ),
+        #041018;
+}
+
+
+.historic-ranking-container {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+.ranking-title > p:first-child {
+    color: #2daee9;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.ranking-title h2 {
+    margin-top: 12px;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.ranking-title h2 span {
+    display: block;
+
+    color: #2daee9;
+}
+
+
+.ranking-description {
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: #7d929c;
+
+    line-height: 1.7;
+}
+
+
+
+/* TABLA */
+
+.historic-table {
+    margin-top: 70px;
+}
+
+
+.historic-driver {
+    display: grid;
+
+    grid-template-columns:
+        70px 40px 1fr auto;
+
+    align-items: center;
+
+    min-height: 70px;
+
+    padding: 0 25px;
+
+    margin-bottom: 6px;
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    background:
+        rgba(255,255,255,0.02);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.historic-driver:hover {
+    transform: translateX(8px);
+
+    background:
+        rgba(45,174,233,0.06);
+}
+
+
+.champion-driver {
+    min-height: 90px;
+
+    border-color:
+        rgba(45,174,233,0.5);
+
+    background:
+        rgba(45,174,233,0.09);
+}
+
+
+.podium-driver {
+    background:
+        rgba(255,255,255,0.035);
+}
+
+
+.historic-position {
+    color: #516873;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+
+.champion-driver
+.historic-position {
+    color: #2daee9;
+}
+
+
+.historic-flag {
+    font-size: 17px;
+}
+
+
+.historic-driver strong {
+    font-size: 17px;
+
+    font-weight: 900;
+}
+
+
+.historic-points {
+    color: #2daee9;
+
+    font-size: 20px;
+
+    font-weight: 900;
+}
+
+
+.historic-points small {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* ==========================================================
+   GALERÍA
+========================================================== */
+
+.edition-gallery {
+    padding: 150px 8%;
+
+    background: #02080c;
+}
+
+
+.edition-gallery-heading {
+    max-width: 1300px;
+
+    margin: 0 auto 70px;
+}
+
+
+.edition-gallery-heading p {
+    color: #2daee9;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.edition-gallery-heading h2 {
+    margin-top: 10px;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.edition-gallery-heading h2 span {
+    display: block;
+
+    color: #2daee9;
+}
+
+
+.edition-gallery-grid {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    grid-template-rows:
+        330px 330px;
+
+    gap: 12px;
+}
+
+
+.edition-gallery-grid img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    opacity: 0.85;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+.edition-gallery-grid img:hover {
+    opacity: 1;
+
+    transform: scale(1.01);
+}
+
+
+.edition-gallery-grid img:first-child {
+    grid-row:
+        1 / 3;
+}
+
+
+
+/* ==========================================================
+   FINAL
+========================================================== */
+
+.edition-ending {
+    padding: 180px 8%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(45,174,233,0.12),
+            transparent 35%
+        ),
+        #02080c;
+}
+
+
+.edition-ending p {
+    color: #607984;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.edition-ending h2 {
+    max-width: 950px;
+
+    margin:
+        20px auto 50px;
+
+    font-size:
+        clamp(60px, 8vw, 120px);
+
+    line-height:
+        0.85;
+
+    letter-spacing:
+        -5px;
+
+    font-weight:
+        900;
+}
+
+
+.edition-ending h2 span {
+    display: block;
+
+    color: #2daee9;
+}
+
+
+.edition-ending a {
+    display: inline-block;
+
+    padding:
+        17px 28px;
+
+    color: #2daee9;
+
+    text-decoration: none;
+
+    border:
+        1px solid #2daee9;
+
+    border-radius:
+        6px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+
+    transition:
+        0.3s;
+}
+
+
+.edition-ending a:hover {
+    color: #02080c;
+
+    background: #2daee9;
+
+    box-shadow:
+        0 0 25px rgba(45,174,233,0.25);
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .edition-hero {
+        padding:
+            140px 25px 80px;
+    }
+
+
+    .edition-hero h1 {
+        font-size:
+            70px;
+
+        letter-spacing:
+            -4px;
+    }
+
+
+    .edition-main-stats {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+
+    .champion-section,
+    .season-races,
+    .historic-ranking,
+    .edition-gallery {
+        padding:
+            100px 25px;
+    }
+
+
+    .champion-main {
+        padding:
+            30px;
+    }
+
+
+    .champion-trophy {
+        padding-right:
+            0;
+
+        font-size:
+            55px;
+    }
+
+
+    .final-podium {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .race-timeline::before {
+        left:
+            20px;
+    }
+
+
+    .history-race,
+    .history-race.reverse {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+        padding-left:
+            50px;
+
+        margin-bottom:
+            100px;
+    }
+
+
+    .history-race.reverse
+    .history-race-info,
+    .history-race.reverse
+    .history-race-image {
+        order:
+            initial;
+    }
+
+
+    .race-line-number {
+        left:
+            20px;
+
+        top:
+            30px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+
+
+    .history-race-info {
+        padding:
+            10px;
+    }
+
+
+    .history-race-image {
+        height:
+            300px;
+    }
+
+
+    .historic-driver {
+        grid-template-columns:
+            45px 30px 1fr auto;
+
+        padding:
+            0 12px;
+    }
+
+
+    .historic-driver strong {
+        font-size:
+            14px;
+    }
+
+
+    .historic-points {
+        font-size:
+            16px;
+    }
+
+
+    .edition-gallery-grid {
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            repeat(4, 250px);
+    }
+
+
+    .edition-gallery-grid
+    img:first-child {
+        grid-row:
+            auto;
+    }
+
+
+    .edition-ending {
+        padding:
+            120px 25px;
+    }
+
+}
