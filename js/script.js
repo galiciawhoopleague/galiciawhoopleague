@@ -4,75 +4,124 @@
 // =============================================
 
 
-// Fecha de inicio del evento
-const raceDate = new Date(
-    "2026-12-05T10:00:00+01:00"
-).getTime();
+// Elementos del contador
+const daysElement =
+    document.getElementById("days");
+
+const hoursElement =
+    document.getElementById("hours");
+
+const minutesElement =
+    document.getElementById("minutes");
+
+const secondsElement =
+    document.getElementById("seconds");
 
 
-// Actualizar contador
-function updateCountdown() {
+// Solo ejecutar el contador si existe en la página
+if (
+    daysElement &&
+    hoursElement &&
+    minutesElement &&
+    secondsElement
+) {
 
-    const now = new Date().getTime();
-
-    const distance = raceDate - now;
-
-
-    // Si todavía no ha llegado el evento
-    if (distance > 0) {
-
-        const days = Math.floor(
-            distance / (1000 * 60 * 60 * 24)
-        );
+    // Fecha de inicio del evento
+    const raceDate = new Date(
+        "2026-12-05T10:00:00+01:00"
+    ).getTime();
 
 
-        const hours = Math.floor(
-            (distance % (1000 * 60 * 60 * 24))
-            / (1000 * 60 * 60)
-        );
+    // Actualizar contador
+    function updateCountdown() {
+
+        const now =
+            new Date().getTime();
+
+        const distance =
+            raceDate - now;
 
 
-        const minutes = Math.floor(
-            (distance % (1000 * 60 * 60))
-            / (1000 * 60)
-        );
+        // Si todavía no ha llegado el evento
+        if (distance > 0) {
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
 
 
-        const seconds = Math.floor(
-            (distance % (1000 * 60))
-            / 1000
-        );
+            const hours =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60 * 24)
+                    ) /
+                    (1000 * 60 * 60)
+                );
 
 
-        document.getElementById("days").innerText =
-            String(days).padStart(2, "0");
+            const minutes =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60)
+                    ) /
+                    (1000 * 60)
+                );
 
 
-        document.getElementById("hours").innerText =
-            String(hours).padStart(2, "0");
+            const seconds =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60)
+                    ) /
+                    1000
+                );
 
 
-        document.getElementById("minutes").innerText =
-            String(minutes).padStart(2, "0");
+            daysElement.innerText =
+                String(days).padStart(2, "0");
 
 
-        document.getElementById("seconds").innerText =
-            String(seconds).padStart(2, "0");
+            hoursElement.innerText =
+                String(hours).padStart(2, "0");
+
+
+            minutesElement.innerText =
+                String(minutes).padStart(2, "0");
+
+
+            secondsElement.innerText =
+                String(seconds).padStart(2, "0");
+
+        } else {
+
+            // Si ya llegó la fecha
+            daysElement.innerText = "00";
+            hoursElement.innerText = "00";
+            minutesElement.innerText = "00";
+            secondsElement.innerText = "00";
+
+        }
 
     }
 
+
+    // Ejecutar inmediatamente
+    updateCountdown();
+
+
+    // Actualizar cada segundo
+    setInterval(
+        updateCountdown,
+        1000
+    );
+
 }
 
-
-// Ejecutar inmediatamente
-updateCountdown();
-
-
-// Actualizar cada segundo
-setInterval(
-    updateCountdown,
-    1000
-);
 
 
 // =============================================
@@ -80,38 +129,49 @@ setInterval(
 // =============================================
 
 const revealElements =
-    document.querySelectorAll(".scroll-reveal");
-
-
-const revealObserver =
-    new IntersectionObserver(
-
-        (entries) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.15
-        }
-
+    document.querySelectorAll(
+        ".scroll-reveal"
     );
 
 
-revealElements.forEach((element) => {
+if (
+    revealElements.length > 0 &&
+    "IntersectionObserver" in window
+) {
 
-    revealObserver.observe(element);
+    const revealObserver =
+        new IntersectionObserver(
 
-});
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+    revealElements.forEach((element) => {
+
+        revealObserver.observe(element);
+
+    });
+
+}
 
 
 
@@ -129,43 +189,52 @@ let countersStarted = false;
 
 
 const statsSection =
-    document.querySelector(".stats-section");
-
-
-const counterObserver =
-    new IntersectionObserver(
-
-        (entries) => {
-
-            entries.forEach((entry) => {
-
-                if (
-                    entry.isIntersecting &&
-                    !countersStarted
-                ) {
-
-                    countersStarted = true;
-
-                    startCounters();
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.25
-        }
-
+    document.querySelector(
+        ".stats-section"
     );
 
 
-if (statsSection) {
+if (
+    statsSection &&
+    statNumbers.length > 0 &&
+    "IntersectionObserver" in window
+) {
 
-    counterObserver.observe(statsSection);
+    const counterObserver =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (
+                        entry.isIntersecting &&
+                        !countersStarted
+                    ) {
+
+                        countersStarted = true;
+
+                        startCounters();
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.25
+            }
+
+        );
+
+
+    counterObserver.observe(
+        statsSection
+    );
 
 }
+
 
 
 function startCounters() {
@@ -178,13 +247,17 @@ function startCounters() {
             );
 
 
-        const duration = 1600;
+        const duration =
+            1600;
+
 
         const startTime =
             performance.now();
 
 
-        function updateCounter(currentTime) {
+        function updateCounter(
+            currentTime
+        ) {
 
             const elapsed =
                 currentTime - startTime;
@@ -212,7 +285,8 @@ function startCounters() {
 
             const currentValue =
                 Math.floor(
-                    easedProgress * target
+                    easedProgress *
+                    target
                 );
 
 
@@ -250,26 +324,45 @@ function startCounters() {
    MENÚ MÓVIL
 ========================================================== */
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+const menuToggle =
+    document.getElementById(
+        "menuToggle"
+    );
+
+const mainNav =
+    document.getElementById(
+        "mainNav"
+    );
 
 
 if (menuToggle && mainNav) {
 
-    menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener(
+        "click",
+        function () {
 
-        menuToggle.classList.toggle("active");
-        mainNav.classList.toggle("open");
+            menuToggle.classList.toggle(
+                "active"
+            );
 
-        const abierto =
-            mainNav.classList.contains("open");
+            mainNav.classList.toggle(
+                "open"
+            );
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            abierto
-        );
 
-    });
+            const abierto =
+                mainNav.classList.contains(
+                    "open"
+                );
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                abierto
+            );
+
+        }
+    );
 
 
     /* CERRAR AL PULSAR UN ENLACE */
@@ -278,20 +371,31 @@ if (menuToggle && mainNav) {
         mainNav.querySelectorAll("a");
 
 
-    menuLinks.forEach(function (link) {
+    menuLinks.forEach(
+        function (link) {
 
-        link.addEventListener("click", function () {
+            link.addEventListener(
+                "click",
+                function () {
 
-            menuToggle.classList.remove("active");
-            mainNav.classList.remove("open");
+                    menuToggle.classList.remove(
+                        "active"
+                    );
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
+                    mainNav.classList.remove(
+                        "open"
+                    );
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
             );
 
-        });
-
-    });
+        }
+    );
 
 }
