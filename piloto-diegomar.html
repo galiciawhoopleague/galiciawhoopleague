@@ -2,17 +2,107 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Perfil de DiegoMar, piloto de la Galicia Whoop League.">
 
-    <title>DiegoMar | Galicia Whoop League</title>
+    <!-- =========================================
+         SEO PRINCIPAL
+    ========================================== -->
+
+    <title>DiegoMar | Piloto FPV Galicia Whoop League</title>
+
+    <meta
+        name="description"
+        content="Perfil de DiegoMar, piloto de Galicia Whoop League. Consulta sus resultados, estadísticas, equipo FPV, palmarés y participación en la temporada."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://galiciawhoopleague.com/piloto-diegomar.html"
+    >
+
+
+    <!-- =========================================
+         OPEN GRAPH
+    ========================================== -->
+
+    <meta
+        property="og:title"
+        content="DiegoMar | Piloto FPV Galicia Whoop League"
+    >
+
+    <meta
+        property="og:description"
+        content="Conoce a DiegoMar, piloto de Galicia Whoop League: resultados, estadísticas, equipo FPV y palmarés."
+    >
+
+    <meta
+        property="og:type"
+        content="profile"
+    >
+
+    <meta
+        property="og:url"
+        content="https://galiciawhoopleague.com/piloto-diegomar.html"
+    >
+
+    <meta
+        property="og:image"
+        content="https://galiciawhoopleague.com/images/pilotos/diegomar.jpg"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Galicia Whoop League"
+    >
+
+    <meta
+        property="og:locale"
+        content="es_ES"
+    >
+
+
+    <!-- =========================================
+         TWITTER / X
+    ========================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="DiegoMar | Piloto FPV Galicia Whoop League"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Perfil de DiegoMar en Galicia Whoop League: resultados, estadísticas, equipo FPV y palmarés."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://galiciawhoopleague.com/images/pilotos/diegomar.jpg"
+    >
+
+
+    <!-- =========================================
+         CSS
+    ========================================== -->
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
@@ -37,7 +127,25 @@
         </div>
 
 
-        <nav>
+        <!-- BOTÓN MENÚ MÓVIL -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -51,7 +159,10 @@
                 Clasificación
             </a>
 
-            <a href="pilotos.html" class="active">
+            <a
+                href="pilotos.html"
+                class="active"
+            >
                 Pilotos
             </a>
 
@@ -107,7 +218,7 @@
 
                 <img
                     src="images/pilotos/diegomar.jpg"
-                    alt="DiegoMar Galicia Whoop League"
+                    alt="DiegoMar piloto de Galicia Whoop League"
                 >
 
             </div>
@@ -675,9 +786,7 @@
                             VICTORIA
                         </h3>
 
-                        <p>
-                           
-                        </p>
+                        <p></p>
 
                     </div>
 
@@ -744,6 +853,14 @@
 
 
     </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
 
 
 </body>
