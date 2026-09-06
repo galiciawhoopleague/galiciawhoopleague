@@ -10907,35 +10907,31 @@ html {
 
 .menu-toggle {
     display: none;
-
-    width: 42px;
-    height: 42px;
-
+    width: 46px;
+    height: 46px;
     padding: 0;
-
     position: relative;
-
     z-index: 1001;
 
-    border: 0;
+    border: 1px solid rgba(45, 174, 233, 0.35);
+    border-radius: 8px;
 
-    background: transparent;
+    background: rgba(45, 174, 233, 0.08);
 
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
-
 
 .menu-toggle span {
     display: block;
-
-    width: 24px;
+    width: 23px;
     height: 2px;
-
     margin: 5px auto;
 
-    background: white;
+    background: #2daee9;
 
-    border-radius: 5px;
+    border-radius: 10px;
 
     transition:
         transform 0.3s ease,
