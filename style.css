@@ -11074,3 +11074,27 @@ html {
     }
 
 }
+
+
+
+/* PRUEBA MENÚ MÓVIL */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        position: relative !important;
+        z-index: 999999 !important;
+    }
+
+    .menu-toggle {
+        position: relative !important;
+        z-index: 1000001 !important;
+        pointer-events: auto !important;
+    }
+
+    #mainNav {
+        z-index: 1000000 !important;
+        pointer-events: auto !important;
+    }
+
+}
