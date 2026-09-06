@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Galería oficial de la Galicia Whoop League. Fotografías, vídeos, pilotos, carreras y experiencias FPV.">
+
     <title>Galería | Galicia Whoop League</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- =====================================================
+         MENÚ
+    ====================================================== -->
 
     <header class="navbar">
 
@@ -35,26 +42,698 @@
     </header>
 
 
-    <main>
+    <main class="gallery-page">
 
-        <section class="section page-section">
 
-            <p class="section-subtitle">
-                TEMPORADA
-            </p>
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-            <h2>
-                GALERÍA
-            </h2>
+        <section class="gallery-hero">
 
-            <p class="section-text">
-                Revive las carreras de la Galicia Whoop League
-                a través de nuestras fotografías y vídeos.
-            </p>
+            <div class="gallery-bg-word">
+                MEDIA
+            </div>
+
+            <div class="gallery-hero-content">
+
+                <p class="gallery-eyebrow">
+                    GALICIA WHOOP LEAGUE · MEDIA
+                </p>
+
+                <h1>
+                    MOMENTOS
+                    <span>A TODA VELOCIDAD.</span>
+                </h1>
+
+                <p class="gallery-intro">
+                    Fotografías, vídeos, pilotos, circuitos, público y todos
+                    los momentos que forman parte de la Galicia Whoop League.
+                </p>
+
+                <div class="gallery-tags">
+
+                    <span>FPV</span>
+                    <span>DRONE RACING</span>
+                    <span>PILOTOS</span>
+                    <span>PÚBLICO</span>
+                    <span>VÍDEOS</span>
+
+                </div>
+
+            </div>
 
         </section>
 
+
+
+        <!-- =====================================================
+             DESTACADO
+        ====================================================== -->
+
+        <section class="gallery-featured">
+
+            <div class="gallery-section-heading">
+
+                <p>
+                    FEATURED
+                </p>
+
+                <h2>
+                    VIVE LA
+                    <span>EXPERIENCIA.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="featured-media">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                >
+                    <source
+                        src="videos/Video_nocturno.mp4"
+                        type="video/mp4"
+                    >
+                </video>
+
+                <div class="featured-overlay"></div>
+
+                <div class="featured-content">
+
+                    <span>
+                        FPV · NIGHT SESSION
+                    </span>
+
+                    <h3>
+                        GALICIA WHOOP LEAGUE
+                    </h3>
+
+                    <p>
+                        Circuitos LED, velocidad y competición.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             GALERÍA PRINCIPAL
+        ====================================================== -->
+
+        <section class="main-gallery">
+
+            <div class="gallery-section-heading">
+
+                <p>
+                    ARCHIVO GWL
+                </p>
+
+                <h2>
+                    LA LIGA
+                    <span>EN IMÁGENES.</span>
+                </h2>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="gallery-filters">
+
+                <button
+                    class="gallery-filter active"
+                    data-filter="all"
+                >
+                    TODO
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    data-filter="carreras"
+                >
+                    CARRERAS
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    data-filter="pilotos"
+                >
+                    PILOTOS
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    data-filter="publico"
+                >
+                    PÚBLICO
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    data-filter="actividades"
+                >
+                    ACTIVIDADES
+                </button>
+
+            </div>
+
+
+
+            <!-- MOSAICO -->
+
+            <div class="gallery-masonry">
+
+
+                <!-- FOTO 01 -->
+
+                <article
+                    class="gallery-item gallery-large"
+                    data-category="carreras"
+                >
+
+                    <img
+                        src="images/galeria/galeria1.jpg"
+                        alt="Carrera Galicia Whoop League">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            CARRERAS
+                        </p>
+
+                        <h3>
+                            CIRCUITO FPV
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 02 -->
+
+                <article
+                    class="gallery-item"
+                    data-category="pilotos"
+                >
+
+                    <img
+                        src="images/galeria/galeria2.jpg"
+                        alt="Pilotos Galicia Whoop League">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            PILOTOS
+                        </p>
+
+                        <h3>
+                            THE GRID
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 03 -->
+
+                <article
+                    class="gallery-item"
+                    data-category="publico"
+                >
+
+                    <img
+                        src="images/galeria/galeria3.jpg"
+                        alt="Público Galicia Whoop League">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            PÚBLICO
+                        </p>
+
+                        <h3>
+                            GWL EXPERIENCE
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 04 -->
+
+                <article
+                    class="gallery-item gallery-wide"
+                    data-category="actividades"
+                >
+
+                    <img
+                        src="images/galeria/galeria4.jpg"
+                        alt="Drone Soccer Galicia Whoop League">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            ACTIVIDADES
+                        </p>
+
+                        <h3>
+                            DRONE SOCCER
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 05 -->
+
+                <article
+                    class="gallery-item"
+                    data-category="carreras"
+                >
+
+                    <img
+                        src="images/galeria/galeria5.jpg"
+                        alt="Tiny Whoop Racing">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            FPV
+                        </p>
+
+                        <h3>
+                            RACE DAY
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 06 -->
+
+                <article
+                    class="gallery-item gallery-tall"
+                    data-category="pilotos"
+                >
+
+                    <img
+                        src="images/galeria/galeria6.jpg"
+                        alt="Piloto FPV Galicia Whoop League">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            PILOTOS
+                        </p>
+
+                        <h3>
+                            FOCUS
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 07 -->
+
+                <article
+                    class="gallery-item"
+                    data-category="actividades"
+                >
+
+                    <img
+                        src="images/galeria/galeria7.jpg"
+                        alt="Simuladores FPV">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            ACTIVIDADES
+                        </p>
+
+                        <h3>
+                            SIMULADORES
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOTO 08 -->
+
+                <article
+                    class="gallery-item gallery-large"
+                    data-category="publico"
+                >
+
+                    <img
+                        src="images/galeria/galeria8.jpg"
+                        alt="Familias Galicia Whoop League">
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            EXPERIENCIA
+                        </p>
+
+                        <h3>
+                            PARA TODOS
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FPV FILMS
+        ====================================================== -->
+
+        <section class="fpv-films">
+
+            <div class="gallery-section-heading">
+
+                <p>
+                    FPV FILMS
+                </p>
+
+                <h2>
+                    DESDE DENTRO
+                    <span>DEL CIRCUITO.</span>
+                </h2>
+
+                <p class="gallery-section-description">
+                    Vuela con nuestros pilotos y descubre las carreras
+                    desde la perspectiva FPV.
+                </p>
+
+            </div>
+
+
+            <div class="films-grid">
+
+
+                <!-- VÍDEO 01 -->
+
+                <div class="film-card">
+
+                    <div class="film-video">
+
+                        <video
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                        >
+                            <source
+                                src="videos/Video_nocturno.mp4"
+                                type="video/mp4"
+                            >
+                        </video>
+
+                        <div class="film-play">
+                            ▶
+                        </div>
+
+                    </div>
+
+                    <div class="film-info">
+
+                        <span>
+                            FPV · NIGHT
+                        </span>
+
+                        <h3>
+                            NIGHT SESSION
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VÍDEO 02 -->
+
+                <div class="film-card">
+
+                    <div class="film-video">
+
+                        <video
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                        >
+                            <source
+                                src="videos/video-fpv-2.mp4"
+                                type="video/mp4"
+                            >
+                        </video>
+
+                        <div class="film-play">
+                            ▶
+                        </div>
+
+                    </div>
+
+                    <div class="film-info">
+
+                        <span>
+                            ONBOARD
+                        </span>
+
+                        <h3>
+                            RACE LAP
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EXPERIENCIA PÚBLICO
+        ====================================================== -->
+
+        <section class="gallery-experience">
+
+            <div class="experience-title">
+
+                <p>
+                    THE GWL EXPERIENCE
+                </p>
+
+                <h2>
+                    MUCHO MÁS
+                    <span>QUE PILOTOS.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="experience-grid">
+
+                <div>
+
+                    <strong>
+                        +25
+                    </strong>
+
+                    <span>
+                        PILOTOS
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        6
+                    </strong>
+
+                    <span>
+                        CARRERAS
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        6
+                    </strong>
+
+                    <span>
+                        SEDES
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        +
+                    </strong>
+
+                    <span>
+                        MILES DE VISITANTES
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CIERRE
+        ====================================================== -->
+
+        <section class="gallery-ending">
+
+            <p>
+                GALICIA WHOOP LEAGUE
+            </p>
+
+            <h2>
+                CADA CARRERA
+                <span>DEJA UNA HISTORIA.</span>
+            </h2>
+
+        </section>
+
+
     </main>
+
+
+
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div
+        class="gallery-lightbox"
+        id="galleryLightbox"
+    >
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+        >
+            ×
+        </button>
+
+
+        <button
+            class="lightbox-arrow lightbox-prev"
+            id="lightboxPrev"
+        >
+            ‹
+        </button>
+
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Galicia Whoop League">
+
+            <div class="lightbox-info">
+
+                <span id="lightboxCounter">
+                    1 / 1
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="lightbox-arrow lightbox-next"
+            id="lightboxNext"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <script src="js/galeria.js"></script>
 
 </body>
 
