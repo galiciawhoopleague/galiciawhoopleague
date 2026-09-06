@@ -243,3 +243,55 @@ function startCounters() {
     });
 
 }
+
+
+
+/* ==========================================================
+   MENÚ MÓVIL
+========================================================== */
+
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+
+if (menuToggle && mainNav) {
+
+    menuToggle.addEventListener("click", function () {
+
+        menuToggle.classList.toggle("active");
+        mainNav.classList.toggle("open");
+
+        const abierto =
+            mainNav.classList.contains("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            abierto
+        );
+
+    });
+
+
+    /* CERRAR AL PULSAR UN ENLACE */
+
+    const menuLinks =
+        mainNav.querySelectorAll("a");
+
+
+    menuLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            menuToggle.classList.remove("active");
+            mainNav.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+}
