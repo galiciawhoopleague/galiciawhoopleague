@@ -2,18 +2,110 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Clasificación general de la Galicia Whoop League. Consulta los pilotos y puntos de la temporada.">
 
-    <title>Clasificación | Galicia Whoop League</title>
+    <!-- =========================================
+         SEO PRINCIPAL
+    ========================================== -->
+
+    <title>Clasificación General FPV | Galicia Whoop League</title>
+
+    <meta
+        name="description"
+        content="Consulta la clasificación general de Galicia Whoop League, la liga de carreras FPV TinyWhoop en Galicia. Pilotos, posiciones y puntos de la temporada."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://galiciawhoopleague.com/clasificacion.html"
+    >
+
+
+    <!-- =========================================
+         OPEN GRAPH
+    ========================================== -->
+
+    <meta
+        property="og:title"
+        content="Clasificación General FPV | Galicia Whoop League"
+    >
+
+    <meta
+        property="og:description"
+        content="Consulta posiciones, pilotos y puntos de la clasificación general de Galicia Whoop League."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://galiciawhoopleague.com/clasificacion.html"
+    >
+
+    <meta
+        property="og:image"
+        content="https://galiciawhoopleague.com/images/logo.png"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Galicia Whoop League"
+    >
+
+    <meta
+        property="og:locale"
+        content="es_ES"
+    >
+
+
+    <!-- =========================================
+         TWITTER / X
+    ========================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Clasificación General FPV | Galicia Whoop League"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Posiciones, pilotos y puntos de la clasificación general de Galicia Whoop League."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://galiciawhoopleague.com/images/logo.png"
+    >
+
+
+    <!-- =========================================
+         CSS
+    ========================================== -->
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
+
 
     <!-- =========================================
          MENÚ SUPERIOR
@@ -22,12 +114,38 @@
     <header class="navbar">
 
         <div class="logo">
+
             <a href="index.html">
-                <img src="images/logo.png" alt="Galicia Whoop League">
+
+                <img
+                    src="images/logo.png"
+                    alt="Galicia Whoop League"
+                >
+
             </a>
+
         </div>
 
-        <nav>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -70,7 +188,9 @@
     </header>
 
 
+
     <main>
+
 
         <!-- =========================================
              CABECERA CLASIFICACIÓN
@@ -81,6 +201,7 @@
             <div class="ranking-background-number">
                 2027
             </div>
+
 
             <div class="ranking-container">
 
@@ -104,6 +225,7 @@
                     </p>
 
                 </div>
+
 
 
                 <!-- =================================
@@ -136,6 +258,7 @@
                     </div>
 
 
+
                     <!-- PRIMERO -->
 
                     <div class="podium-card podium-first">
@@ -161,6 +284,7 @@
                         </span>
 
                     </div>
+
 
 
                     <!-- TERCERO -->
@@ -189,6 +313,7 @@
                 </div>
 
 
+
                 <!-- =================================
                      TABLA COMPLETA
                 ================================== -->
@@ -198,6 +323,7 @@
                     <div class="ranking-table-title">
 
                         <div>
+
                             <p class="section-eyebrow">
                                 CAMPEONATO
                             </p>
@@ -205,13 +331,16 @@
                             <h2>
                                 TODOS LOS PILOTOS
                             </h2>
+
                         </div>
+
 
                         <span class="ranking-driver-count">
                             24 PILOTOS
                         </span>
 
                     </div>
+
 
 
                     <!-- CABECERA -->
@@ -225,6 +354,7 @@
                         <div>PUNTOS</div>
 
                     </div>
+
 
 
                     <!-- PILOTO 1 -->
@@ -255,6 +385,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 2 -->
 
                     <div class="ranking-row top-driver">
@@ -281,6 +412,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 3 -->
@@ -311,40 +443,63 @@
                     </div>
 
 
+
                     <!-- PILOTO 4 -->
 
                     <div class="ranking-row">
 
-                        <div class="position">04</div>
+                        <div class="position">
+                            04
+                        </div>
 
                         <div class="driver">
-                            <div class="driver-number">04</div>
-                            <span>Piloto</span>
+
+                            <div class="driver-number">
+                                04
+                            </div>
+
+                            <span>
+                                Piloto
+                            </span>
+
                         </div>
 
                         <div class="points">
-                            0 <small>PTS</small>
+                            0
+                            <small>PTS</small>
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 5 -->
 
                     <div class="ranking-row">
 
-                        <div class="position">05</div>
+                        <div class="position">
+                            05
+                        </div>
 
                         <div class="driver">
-                            <div class="driver-number">05</div>
-                            <span>Piloto</span>
+
+                            <div class="driver-number">
+                                05
+                            </div>
+
+                            <span>
+                                Piloto
+                            </span>
+
                         </div>
 
                         <div class="points">
-                             0 <small>PTS</small>
+                            0
+                            <small>PTS</small>
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 6 -->
@@ -365,6 +520,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 7 -->
 
                     <div class="ranking-row">
@@ -381,6 +537,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 8 -->
@@ -401,6 +558,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 9 -->
 
                     <div class="ranking-row">
@@ -417,6 +575,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 10 -->
@@ -437,6 +596,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 11 -->
 
                     <div class="ranking-row">
@@ -453,6 +613,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 12 -->
@@ -473,6 +634,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 13 -->
 
                     <div class="ranking-row">
@@ -489,6 +651,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 14 -->
@@ -509,6 +672,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 15 -->
 
                     <div class="ranking-row">
@@ -525,6 +689,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 16 -->
@@ -545,6 +710,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 17 -->
 
                     <div class="ranking-row">
@@ -561,6 +727,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 18 -->
@@ -581,6 +748,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 19 -->
 
                     <div class="ranking-row">
@@ -597,6 +765,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 20 -->
@@ -617,6 +786,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 21 -->
 
                     <div class="ranking-row">
@@ -633,6 +803,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 22 -->
@@ -653,6 +824,7 @@
                     </div>
 
 
+
                     <!-- PILOTO 23 -->
 
                     <div class="ranking-row">
@@ -669,6 +841,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- PILOTO 24 -->
@@ -691,11 +864,22 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
+
     </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/script.js"></script>
+
 
 </body>
 
