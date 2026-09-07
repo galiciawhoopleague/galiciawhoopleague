@@ -11098,3 +11098,239 @@ html {
     }
 
 }
+
+
+
+/* ==========================================================
+   REDES SOCIALES · HOME
+========================================================== */
+
+.social-section {
+    position: relative;
+    padding: 120px 7%;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(45, 174, 233, 0.09),
+            transparent 45%
+        ),
+        #03080c;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.social-content {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.social-eyebrow {
+    margin: 0 0 18px;
+    color: #2daee9;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.social-content > h2 {
+    max-width: 850px;
+    margin: 0;
+    color: white;
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.social-content > h2 span {
+    display: block;
+    color: #2daee9;
+}
+
+.social-description {
+    max-width: 650px;
+    margin: 28px 0 55px;
+    color: #91a3ad;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.social-card {
+    min-height: 230px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 38px;
+    overflow: hidden;
+    text-decoration: none;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.social-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(45,174,233,0.14),
+            transparent 50%
+        );
+    transition: opacity 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(45,174,233,0.45);
+    background: rgba(45,174,233,0.035);
+}
+
+.social-card:hover::before {
+    opacity: 1;
+}
+
+.social-icon {
+    width: 72px;
+    height: 72px;
+    flex: 0 0 72px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(45,174,233,0.25);
+    background: rgba(45,174,233,0.06);
+}
+
+.social-icon svg {
+    width: 35px;
+    height: 35px;
+    fill: none;
+    stroke: #2daee9;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social-icon svg .social-icon-fill {
+    fill: #2daee9;
+    stroke: none;
+}
+
+.social-youtube .social-icon svg path:first-child {
+    fill: none;
+    stroke: #2daee9;
+}
+
+.social-card-text {
+    position: relative;
+    z-index: 2;
+}
+
+.social-card-text > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #2daee9;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+
+.social-card-text h3 {
+    margin: 0 0 12px;
+    color: white;
+    font-size: 21px;
+    letter-spacing: -0.5px;
+}
+
+.social-card-text p {
+    max-width: 350px;
+    margin: 0;
+    color: #82949e;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-arrow {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    z-index: 2;
+    color: #2daee9;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* ==========================================================
+   REDES SOCIALES · MÓVIL
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .social-section {
+        padding: 85px 20px;
+    }
+
+    .social-content > h2 {
+        font-size: clamp(40px, 13vw, 62px);
+        letter-spacing: -2px;
+    }
+
+    .social-description {
+        margin: 24px 0 40px;
+        font-size: 15px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        min-height: 0;
+        padding: 28px 22px;
+        gap: 20px;
+    }
+
+    .social-icon {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+    }
+
+    .social-icon svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .social-card-text h3 {
+        padding-right: 25px;
+        font-size: 17px;
+    }
+
+    .social-card-text p {
+        font-size: 13px;
+    }
+
+    .social-arrow {
+        top: 20px;
+        right: 20px;
+    }
+
+}
