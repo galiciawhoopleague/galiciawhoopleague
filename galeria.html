@@ -318,7 +318,9 @@
 
 
 
-            <!-- FILTROS -->
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
 
             <div class="gallery-filters">
 
@@ -361,267 +363,23 @@
 
 
 
-            <!-- MOSAICO -->
+            <!-- =================================================
+                 MOSAICO
+                 
+                 Las fotos se generan automáticamente:
+                 
+                 carreras1.jpg → carreras20.jpg
+                 pilotos1.jpg → pilotos20.jpg
+                 publico1.jpg → publico20.jpg
+                 actividades1.jpg → actividades20.jpg
+                 
+            ================================================== -->
+
+            <div
+                class="gallery-masonry"
+                id="galleryMasonry"
+            ></div>
 
-            <div class="gallery-masonry">
-
-
-                <!-- FOTO 01 -->
-
-                <article
-                    class="gallery-item gallery-large"
-                    data-category="carreras"
-                >
-
-                    <img
-                        src="images/galeria/galeria1.jpg"
-                        alt="Carrera Galicia Whoop League"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            CARRERAS
-                        </p>
-
-                        <h3>
-                            CIRCUITO FPV
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 02 -->
-
-                <article
-                    class="gallery-item"
-                    data-category="pilotos"
-                >
-
-                    <img
-                        src="images/galeria/galeria2.jpg"
-                        alt="Pilotos Galicia Whoop League"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            PILOTOS
-                        </p>
-
-                        <h3>
-                            THE GRID
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 03 -->
-
-                <article
-                    class="gallery-item"
-                    data-category="publico"
-                >
-
-                    <img
-                        src="images/galeria/galeria3.jpg"
-                        alt="Público Galicia Whoop League"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            PÚBLICO
-                        </p>
-
-                        <h3>
-                            GWL EXPERIENCE
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 04 -->
-
-                <article
-                    class="gallery-item gallery-wide"
-                    data-category="actividades"
-                >
-
-                    <img
-                        src="images/galeria/galeria4.jpg"
-                        alt="Drone Soccer Galicia Whoop League"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            ACTIVIDADES
-                        </p>
-
-                        <h3>
-                            DRONE SOCCER
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 05 -->
-
-                <article
-                    class="gallery-item"
-                    data-category="carreras"
-                >
-
-                    <img
-                        src="images/galeria/galeria5.jpg"
-                        alt="Tiny Whoop Racing"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            FPV
-                        </p>
-
-                        <h3>
-                            RACE DAY
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 06 -->
-
-                <article
-                    class="gallery-item gallery-tall"
-                    data-category="pilotos"
-                >
-
-                    <img
-                        src="images/galeria/galeria6.jpg"
-                        alt="Piloto FPV Galicia Whoop League"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            PILOTOS
-                        </p>
-
-                        <h3>
-                            FOCUS
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 07 -->
-
-                <article
-                    class="gallery-item"
-                    data-category="actividades"
-                >
-
-                    <img
-                        src="images/galeria/galeria7.jpg"
-                        alt="Simuladores FPV"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            ACTIVIDADES
-                        </p>
-
-                        <h3>
-                            SIMULADORES
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FOTO 08 -->
-
-                <article
-                    class="gallery-item gallery-large"
-                    data-category="publico"
-                >
-
-                    <img
-                        src="images/galeria/galeria8.jpg"
-                        alt="Familias Galicia Whoop League"
-                    >
-
-                    <div class="gallery-item-overlay">
-
-                        <p>
-                            EXPERIENCIA
-                        </p>
-
-                        <h3>
-                            PARA TODOS
-                        </h3>
-
-                        <span>
-                            VER FOTO ↗
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
 
         </section>
 
@@ -861,6 +619,7 @@
         <button
             class="lightbox-close"
             id="lightboxClose"
+            aria-label="Cerrar imagen"
         >
             ×
         </button>
@@ -869,6 +628,7 @@
         <button
             class="lightbox-arrow lightbox-prev"
             id="lightboxPrev"
+            aria-label="Imagen anterior"
         >
             ‹
         </button>
@@ -896,6 +656,7 @@
         <button
             class="lightbox-arrow lightbox-next"
             id="lightboxNext"
+            aria-label="Imagen siguiente"
         >
             ›
         </button>
@@ -905,10 +666,162 @@
 
 
     <!-- =====================================================
-         JAVASCRIPT
+         GENERADOR AUTOMÁTICO DE FOTOS
+    ====================================================== -->
+
+    <script>
+
+        const galleryMasonry =
+            document.getElementById("galleryMasonry");
+
+
+        /*
+        ==========================================================
+        CATEGORÍAS
+
+        Cada categoría tiene 20 imágenes.
+
+        Solo tienes que ponerlas dentro de:
+
+        images/galeria/
+
+        con los nombres indicados.
+        ==========================================================
+        */
+
+        const galleryCategories = [
+
+            {
+                category: "carreras",
+                file: "carreras",
+                label: "CARRERAS",
+                title: "RACE DAY"
+            },
+
+            {
+                category: "pilotos",
+                file: "pilotos",
+                label: "PILOTOS",
+                title: "THE GRID"
+            },
+
+            {
+                category: "publico",
+                file: "publico",
+                label: "PÚBLICO",
+                title: "GWL EXPERIENCE"
+            },
+
+            {
+                category: "actividades",
+                file: "actividades",
+                label: "ACTIVIDADES",
+                title: "GWL ACTIVITIES"
+            }
+
+        ];
+
+
+
+        /*
+        ==========================================================
+        GENERAMOS 20 FOTOS DE CADA CATEGORÍA
+        ==========================================================
+        */
+
+        galleryCategories.forEach((group) => {
+
+            for (let i = 1; i <= 20; i++) {
+
+
+                const article =
+                    document.createElement("article");
+
+
+                article.classList.add(
+                    "gallery-item"
+                );
+
+
+                /*
+                Diferentes tamaños para mantener
+                el aspecto de mosaico de la galería.
+                */
+
+                if (i % 9 === 1) {
+
+                    article.classList.add(
+                        "gallery-large"
+                    );
+
+                } else if (i % 7 === 0) {
+
+                    article.classList.add(
+                        "gallery-tall"
+                    );
+
+                } else if (i % 5 === 0) {
+
+                    article.classList.add(
+                        "gallery-wide"
+                    );
+
+                }
+
+
+                article.dataset.category =
+                    group.category;
+
+
+                article.innerHTML = `
+
+                    <img
+                        src="images/galeria/${group.file}${i}.jpg"
+                        alt="${group.label} Galicia Whoop League ${i}"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-item-overlay">
+
+                        <p>
+                            ${group.label}
+                        </p>
+
+                        <h3>
+                            ${group.title}
+                        </h3>
+
+                        <span>
+                            VER FOTO ↗
+                        </span>
+
+                    </div>
+
+                `;
+
+
+                galleryMasonry.appendChild(
+                    article
+                );
+
+            }
+
+        });
+
+    </script>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT GALERÍA
     ====================================================== -->
 
     <script src="js/galeria.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT GENERAL
+    ====================================================== -->
 
     <script src="js/script.js"></script>
 
