@@ -11334,3 +11334,42 @@ html {
     }
 
 }
+
+
+
+/* ==========================================================
+   FOTOS · CARRERAS FPV EN DIRECTO
+========================================================== */
+
+.live-feature-image {
+    width: 100%;
+    height: 155px;
+    margin: 20px 0 18px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgba(45, 174, 233, 0.15);
+    background: #061017;
+}
+
+.live-feature-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.live-feature-card:hover .live-feature-image img {
+    transform: scale(1.05);
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 800px) {
+
+    .live-feature-image {
+        height: 190px;
+    }
+
+}
