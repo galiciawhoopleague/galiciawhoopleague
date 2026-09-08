@@ -11373,3 +11373,105 @@ html {
     }
 
 }
+
+
+
+/* ==========================================================
+   FOTOS CARRERAS FPV · CORRECCIÓN
+========================================================== */
+
+.live-feature-image {
+    width: 100%;
+    height: 230px;
+
+    margin: 20px 0 22px;
+
+    overflow: hidden;
+
+    /* QUITAMOS EL CUADRADO INTERIOR */
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+.live-feature-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    transition: transform 0.4s ease;
+}
+
+.live-feature-card:hover .live-feature-image img {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================================
+   MÓVIL
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .live-feature-image {
+        height: 260px;
+    }
+
+}
+
+
+
+/* ==========================================================
+   CARRERAS FPV · FOTOS GRANDES SIN RECUADRO INTERIOR
+========================================================== */
+
+.live-features .live-feature-card .live-feature-image {
+    width: 100% !important;
+    height: 220px !important;
+
+    margin: 20px 0 22px !important;
+    padding: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    border-radius: 0 !important;
+    background: transparent !important;
+
+    overflow: hidden !important;
+}
+
+.live-features .live-feature-card .live-feature-image img {
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    border-radius: 3px !important;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 800px) {
+
+    .live-features .live-feature-card .live-feature-image {
+        height: 240px !important;
+    }
+
+}
