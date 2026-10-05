@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
@@ -12,11 +13,11 @@
          SEO PRINCIPAL
     ========================================== -->
 
-    <title>Calendario de Carreras FPV | Galicia Whoop League</title>
+    <title>Calendario y Eventos FPV | Galicia Whoop League</title>
 
     <meta
         name="description"
-        content="Consulta el calendario de Galicia Whoop League, la liga de carreras FPV TinyWhoop en Galicia. Fechas, eventos y sedes de las seis carreras de la temporada."
+        content="Consulta el calendario de Galicia Whoop League: carreras oficiales FPV TinyWhoop, eventos especiales, exhibiciones y actividades en Galicia."
     >
 
     <meta
@@ -36,12 +37,12 @@
 
     <meta
         property="og:title"
-        content="Calendario de Carreras FPV | Galicia Whoop League"
+        content="Calendario y Eventos | Galicia Whoop League"
     >
 
     <meta
         property="og:description"
-        content="Consulta las fechas, eventos y sedes de las carreras FPV TinyWhoop de Galicia Whoop League."
+        content="Carreras oficiales, eventos FPV, exhibiciones y actividades de Galicia Whoop League."
     >
 
     <meta
@@ -81,12 +82,12 @@
 
     <meta
         name="twitter:title"
-        content="Calendario de Carreras FPV | Galicia Whoop League"
+        content="Calendario y Eventos | Galicia Whoop League"
     >
 
     <meta
         name="twitter:description"
-        content="Fechas, eventos y sedes de las carreras FPV TinyWhoop de Galicia Whoop League."
+        content="Carreras oficiales, eventos FPV y actividades de Galicia Whoop League."
     >
 
     <meta
@@ -100,6 +101,230 @@
     ========================================== -->
 
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- =========================================
+         ESTILOS EVENTOS ESPECIALES
+    ========================================== -->
+
+    <style>
+
+        /* BLOQUES QUE SEPARAN EVENTOS Y LIGA */
+
+        .calendar-block {
+            margin-top: 70px;
+        }
+
+        .calendar-block-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .calendar-block-label {
+            display: block;
+            color: #00aeef;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .calendar-block-header h3 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .calendar-block-header p {
+            max-width: 720px;
+            margin: 15px auto 0;
+            color: #aab8c2;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+
+        /* AVISO: NO PUNTÚAN */
+
+        .events-notice {
+            max-width: 845px;
+            margin: 0 auto 30px;
+            padding: 13px 20px;
+
+            border: 1px solid rgba(0, 174, 239, 0.30);
+            border-radius: 8px;
+
+            background: rgba(0, 174, 239, 0.05);
+
+            color: #8ea5b2;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .events-notice strong {
+            color: #00aeef;
+        }
+
+
+        /* TARJETAS DE EVENTOS */
+
+        .special-event-card {
+            max-width: 845px;
+            margin: 0 auto 22px;
+
+            display: grid;
+            grid-template-columns: 95px 1fr auto;
+            align-items: center;
+            gap: 20px;
+
+            padding: 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 174, 239, 0.09),
+                    rgba(7, 29, 40, 0.96)
+                );
+
+            border: 1px solid rgba(0, 174, 239, 0.40);
+            border-radius: 10px;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .special-event-card:hover {
+            transform: translateY(-3px);
+            border-color: #00aeef;
+            box-shadow: 0 10px 30px rgba(0, 174, 239, 0.08);
+        }
+
+
+        /* FECHA GRANDE */
+
+        .event-date {
+            text-align: center;
+            line-height: 1;
+        }
+
+        .event-day {
+            display: block;
+            color: #00aeef;
+            font-size: 38px;
+            font-weight: 900;
+        }
+
+        .event-month {
+            display: block;
+            margin-top: 7px;
+
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+
+        /* INFORMACIÓN */
+
+        .event-info {
+            min-width: 0;
+        }
+
+        .event-status {
+            display: block;
+            margin-bottom: 6px;
+
+            color: #00aeef;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+        }
+
+        .event-info h4 {
+            margin: 0 0 7px;
+
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .event-info p {
+            margin: 0;
+
+            color: #8fa6b3;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+
+        /* UBICACIÓN */
+
+        .event-location {
+            color: #00aeef;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+
+        /* SEPARADOR ANTES DE LA LIGA */
+
+        .league-divider {
+            max-width: 845px;
+            height: 1px;
+            margin: 70px auto 0;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(0, 174, 239, 0.45),
+                transparent
+            );
+        }
+
+
+        /* MÓVIL */
+
+        @media (max-width: 700px) {
+
+            .calendar-block {
+                margin-top: 50px;
+            }
+
+            .calendar-block-header h3 {
+                font-size: 25px;
+            }
+
+            .calendar-block-label {
+                font-size: 10px;
+                letter-spacing: 3px;
+            }
+
+            .special-event-card {
+                grid-template-columns: 70px 1fr;
+                gap: 15px;
+                padding: 22px 18px;
+            }
+
+            .event-day {
+                font-size: 32px;
+            }
+
+            .event-location {
+                grid-column: 2;
+                text-align: left;
+                margin-top: 5px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -194,10 +419,12 @@
         <section class="section page-section">
 
 
-            <!-- CABECERA -->
+            <!-- =====================================
+                 CABECERA GENERAL
+            ====================================== -->
 
             <p class="section-subtitle">
-                SEGUNDA EDICIÓN · 6 CARRERAS
+                SEGUNDA EDICIÓN · 2026/2027
             </p>
 
             <h2>
@@ -205,46 +432,131 @@
             </h2>
 
             <p class="section-text">
-                Seis carreras. Seis circuitos. Una temporada para decidir
-                quién se convierte en campeón de la segunda edición de la Galicia Whoop League.
+                Carreras oficiales, eventos especiales y actividades de
+                Galicia Whoop League por toda Galicia.
             </p>
 
 
 
             <!-- =====================================
-                 CARRERA 01
+                 EVENTOS GWL
             ====================================== -->
 
-            <div class="race-card race-confirmed">
+            <div class="calendar-block">
 
-                <div>
+                <div class="calendar-block-header">
 
-                    <span class="race-number">
-                        01
-                    </span>
-
-                </div>
-
-
-                <div class="race-info">
-
-                    <span class="race-status confirmed">
-                        ● CONFIRMADA
+                    <span class="calendar-block-label">
+                        MÁS ALLÁ DE LA COMPETICIÓN
                     </span>
 
                     <h3>
-                        MARIN GAMING 2026
+                        EVENTOS GWL
                     </h3>
 
                     <p>
-                        5 y 6 de diciembre de 2026
+                        Galicia Whoop League también estará presente en eventos
+                        tecnológicos, gaming y actividades especiales durante
+                        la temporada.
                     </p>
 
                 </div>
 
 
-                <div class="race-location">
-                    📍 MARÍN
+                <div class="events-notice">
+
+                    <strong>EVENTOS ESPECIALES</strong> ·
+                    Estas actividades no forman parte de las 6 carreras
+                    oficiales ni puntúan para la clasificación de la liga.
+
+                </div>
+
+
+
+                <!-- =====================================
+                     XGN INTERMAX
+                ====================================== -->
+
+                <div class="special-event-card">
+
+                    <div class="event-date">
+
+                        <span class="event-day">
+                            10
+                        </span>
+
+                        <span class="event-month">
+                            OCT
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-info">
+
+                        <span class="event-status">
+                            ● EVENTO GWL
+                        </span>
+
+                        <h4>
+                            XGN INTERMAX 2026
+                        </h4>
+
+                        <p>
+                            FPV Racing · Drone Soccer · Simuladores · Experiencia FPV
+                        </p>
+
+                    </div>
+
+
+                    <div class="event-location">
+                        📍 SILLEDA
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     LUAGAMING
+                ====================================== -->
+
+                <div class="special-event-card">
+
+                    <div class="event-date">
+
+                        <span class="event-day">
+                            17
+                        </span>
+
+                        <span class="event-month">
+                            OCT
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-info">
+
+                        <span class="event-status">
+                            ● EVENTO GWL
+                        </span>
+
+                        <h4>
+                            LUAGAMING
+                        </h4>
+
+                        <p>
+                            FPV · Drone Soccer · Gaming · Actividades abiertas al público
+                        </p>
+
+                    </div>
+
+
+                    <div class="event-location">
+                        📍 CIDADE DA CULTURA · SANTIAGO
+                    </div>
+
                 </div>
 
             </div>
@@ -252,199 +564,275 @@
 
 
             <!-- =====================================
-                 CARRERA 02
+                 SEPARADOR
             ====================================== -->
 
-            <div class="race-card race-coming">
-
-                <div>
-
-                    <span class="race-number">
-                        02
-                    </span>
-
-                </div>
-
-
-                <div class="race-info">
-
-                    <span class="race-status">
-                        PRÓXIMAMENTE
-                    </span>
-
-                    <h3>
-                        CARRERA 02
-                    </h3>
-
-                    <p>
-                        Fecha por anunciar
-                    </p>
-
-                </div>
-
-
-                <div class="race-location">
-                    📍 POR ANUNCIAR
-                </div>
-
-            </div>
+            <div class="league-divider"></div>
 
 
 
             <!-- =====================================
-                 CARRERA 03
+                 CARRERAS OFICIALES
             ====================================== -->
 
-            <div class="race-card race-coming">
+            <div class="calendar-block">
 
-                <div>
+                <div class="calendar-block-header">
 
-                    <span class="race-number">
-                        03
-                    </span>
-
-                </div>
-
-
-                <div class="race-info">
-
-                    <span class="race-status">
-                        PRÓXIMAMENTE
+                    <span class="calendar-block-label">
+                        SEGUNDA EDICIÓN · 6 CARRERAS
                     </span>
 
                     <h3>
-                        CARRERA 03
+                        CARRERAS OFICIALES
                     </h3>
 
                     <p>
-                        Fecha por anunciar
+                        Seis carreras. Seis circuitos. Una temporada para decidir
+                        quién se convierte en campeón de la segunda edición de
+                        Galicia Whoop League.
                     </p>
 
                 </div>
 
 
-                <div class="race-location">
-                    📍 POR ANUNCIAR
-                </div>
 
-            </div>
+                <!-- =====================================
+                     CARRERA 01
+                ====================================== -->
 
+                <div class="race-card race-confirmed">
 
+                    <div>
 
-            <!-- =====================================
-                 CARRERA 04
-            ====================================== -->
+                        <span class="race-number">
+                            01
+                        </span>
 
-            <div class="race-card race-coming">
-
-                <div>
-
-                    <span class="race-number">
-                        04
-                    </span>
-
-                </div>
+                    </div>
 
 
-                <div class="race-info">
+                    <div class="race-info">
 
-                    <span class="race-status">
-                        PRÓXIMAMENTE
-                    </span>
+                        <span class="race-status confirmed">
+                            ● CONFIRMADA
+                        </span>
 
-                    <h3>
-                        CARRERA 04
-                    </h3>
+                        <h3>
+                            MARIN GAMING 2026
+                        </h3>
 
-                    <p>
-                        Fecha por anunciar
-                    </p>
+                        <p>
+                            5 y 6 de diciembre de 2026
+                        </p>
 
-                </div>
-
-
-                <div class="race-location">
-                    📍 POR ANUNCIAR
-                </div>
-
-            </div>
+                    </div>
 
 
-
-            <!-- =====================================
-                 CARRERA 05
-            ====================================== -->
-
-            <div class="race-card race-coming">
-
-                <div>
-
-                    <span class="race-number">
-                        05
-                    </span>
+                    <div class="race-location">
+                        📍 MARÍN
+                    </div>
 
                 </div>
 
 
-                <div class="race-info">
 
-                    <span class="race-status">
-                        PRÓXIMAMENTE
-                    </span>
+                <!-- =====================================
+                     CARRERA 02
+                ====================================== -->
 
-                    <h3>
-                        CARRERA 05
-                    </h3>
+                <div class="race-card race-coming">
 
-                    <p>
-                        Fecha por anunciar
-                    </p>
+                    <div>
 
-                </div>
+                        <span class="race-number">
+                            02
+                        </span>
 
-
-                <div class="race-location">
-                    📍 POR ANUNCIAR
-                </div>
-
-            </div>
+                    </div>
 
 
+                    <div class="race-info">
 
-            <!-- =====================================
-                 CARRERA 06
-            ====================================== -->
+                        <span class="race-status">
+                            PRÓXIMAMENTE
+                        </span>
 
-            <div class="race-card race-coming">
+                        <h3>
+                            CARRERA 02
+                        </h3>
 
-                <div>
+                        <p>
+                            Fecha por anunciar
+                        </p>
 
-                    <span class="race-number">
-                        06
-                    </span>
-
-                </div>
+                    </div>
 
 
-                <div class="race-info">
-
-                    <span class="race-status">
-                        PRÓXIMAMENTE
-                    </span>
-
-                    <h3>
-                        CARRERA 06
-                    </h3>
-
-                    <p>
-                        Fecha por anunciar
-                    </p>
+                    <div class="race-location">
+                        📍 POR ANUNCIAR
+                    </div>
 
                 </div>
 
 
-                <div class="race-location">
-                    📍 POR ANUNCIAR
+
+                <!-- =====================================
+                     CARRERA 03
+                ====================================== -->
+
+                <div class="race-card race-coming">
+
+                    <div>
+
+                        <span class="race-number">
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <div class="race-info">
+
+                        <span class="race-status">
+                            PRÓXIMAMENTE
+                        </span>
+
+                        <h3>
+                            CARRERA 03
+                        </h3>
+
+                        <p>
+                            Fecha por anunciar
+                        </p>
+
+                    </div>
+
+
+                    <div class="race-location">
+                        📍 POR ANUNCIAR
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     CARRERA 04
+                ====================================== -->
+
+                <div class="race-card race-coming">
+
+                    <div>
+
+                        <span class="race-number">
+                            04
+                        </span>
+
+                    </div>
+
+
+                    <div class="race-info">
+
+                        <span class="race-status">
+                            PRÓXIMAMENTE
+                        </span>
+
+                        <h3>
+                            CARRERA 04
+                        </h3>
+
+                        <p>
+                            Fecha por anunciar
+                        </p>
+
+                    </div>
+
+
+                    <div class="race-location">
+                        📍 POR ANUNCIAR
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     CARRERA 05
+                ====================================== -->
+
+                <div class="race-card race-coming">
+
+                    <div>
+
+                        <span class="race-number">
+                            05
+                        </span>
+
+                    </div>
+
+
+                    <div class="race-info">
+
+                        <span class="race-status">
+                            PRÓXIMAMENTE
+                        </span>
+
+                        <h3>
+                            CARRERA 05
+                        </h3>
+
+                        <p>
+                            Fecha por anunciar
+                        </p>
+
+                    </div>
+
+
+                    <div class="race-location">
+                        📍 POR ANUNCIAR
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     CARRERA 06
+                ====================================== -->
+
+                <div class="race-card race-coming">
+
+                    <div>
+
+                        <span class="race-number">
+                            06
+                        </span>
+
+                    </div>
+
+
+                    <div class="race-info">
+
+                        <span class="race-status">
+                            PRÓXIMAMENTE
+                        </span>
+
+                        <h3>
+                            CARRERA 06
+                        </h3>
+
+                        <p>
+                            Fecha por anunciar
+                        </p>
+
+                    </div>
+
+
+                    <div class="race-location">
+                        📍 POR ANUNCIAR
+                    </div>
+
                 </div>
 
             </div>
