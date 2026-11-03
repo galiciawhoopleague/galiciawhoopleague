@@ -101,6 +101,36 @@
 
     <link rel="stylesheet" href="style.css">
 
+
+    <!-- Estilos exclusivos de las clasificaciones individuales -->
+    <style>
+      .event-rankings {padding: 85px 22px 105px; background: linear-gradient(180deg,#07131c 0%,#101521 45%,#0b1420 100%); color:#f7f9ff;}
+      .event-rankings-inner {max-width:1100px;margin:auto;}
+      .event-rankings-eyebrow {font-size:12px;letter-spacing:3px;font-weight:800;color:#ffad64;margin:0 0 12px;}
+      .event-rankings h2 {font-size:clamp(28px,5vw,46px);line-height:1.1;margin:0 0 14px;font-weight:900;}
+      .event-rankings-intro {max-width:730px;color:#aebdce;line-height:1.7;margin:0 0 38px;}
+      .event-ranking-card {--race-accent:#ff9a43;--race-glow:rgba(255,154,67,.13);background:linear-gradient(125deg,var(--race-glow),transparent 50%),#111d2b;border:1px solid #2b3a4b;border-top:4px solid var(--race-accent);border-radius:17px;margin:0 0 35px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.16);}
+      .event-ranking-card.race-violet {--race-accent:#b29aff;--race-glow:rgba(178,154,255,.13);}
+      .event-ranking-header {display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:30px 32px 25px;}
+      .event-ranking-kicker {font-size:12px;letter-spacing:2px;font-weight:900;color:var(--race-accent);}
+      .event-ranking-header h3 {font-size:clamp(23px,4vw,32px);margin:9px 0;font-weight:900;color:white;}
+      .event-ranking-place {color:#b3c1d0;font-size:13px;margin:0;}
+      .event-ranking-pill {color:var(--race-accent);border:1px solid var(--race-accent);border-radius:99px;padding:9px 13px;font-size:11px;font-weight:800;letter-spacing:1px;white-space:nowrap;}
+      .event-ranking-note {margin:0 32px 22px;color:#b8c4d0;font-size:13px;line-height:1.6;}
+      .event-ranking-scroll {overflow-x:auto;}
+      .event-ranking-table {width:100%;border-collapse:collapse;text-align:left;min-width:430px;}
+      .event-ranking-table th {font-size:11px;letter-spacing:1.4px;color:#8fa1b6;background:#0a1420;padding:15px 28px;}
+      .event-ranking-table td {padding:14px 28px;border-bottom:1px solid rgba(165,189,215,.10);font-size:14px;color:#e7edf5;}
+      .event-ranking-table tbody tr:nth-child(even){background:rgba(255,255,255,.025);}
+      .event-ranking-table tbody tr:hover {background:var(--race-glow);}
+      .event-ranking-table tbody tr:last-child td{border-bottom:0;}
+      .event-ranking-table td:first-child {font-weight:900;color:var(--race-accent);width:85px;}
+      .event-ranking-table td:last-child,.event-ranking-table th:last-child {text-align:right;}
+      .event-ranking-table td:last-child {font-weight:800;}
+      .event-ranking-table .driver-bib {display:inline-flex;align-items:center;justify-content:center;min-width:33px;height:27px;border-radius:5px;background:#263549;color:#a9c1d8;font-size:11px;font-weight:800;margin-right:12px;}
+      @media(max-width:600px){.event-rankings{padding:55px 14px 75px}.event-ranking-header{padding:24px 18px 18px}.event-ranking-note{margin:0 18px 18px}.event-ranking-table td,.event-ranking-table th{padding:13px 15px}.event-ranking-table .driver-bib{margin-right:7px}}
+    </style>
+
 </head>
 
 
@@ -869,6 +899,94 @@
 
         </section>
 
+
+
+    <!-- =========================================
+         CLASIFICACIONES INDIVIDUALES POR CARRERA
+    ========================================== -->
+    <section class="event-rankings" id="clasificaciones-carreras">
+      <div class="event-rankings-inner">
+        <p class="event-rankings-eyebrow">GALICIA WHOOP LEAGUE · 2026/2027</p>
+        <h2>CLASIFICACIONES POR CARRERA</h2>
+        <p class="event-rankings-intro">Consulta la clasificación individual de cada prueba de la liga. Los resultados oficiales se publicarán después de cada carrera.</p>
+      <!-- RACE 01: orden provisional; actualizar al publicar resultados -->
+      <article class="event-ranking-card">
+        <div class="event-ranking-header">
+          <div><span class="event-ranking-kicker">RACE 01 · TEMPORADA 2026/27</span>
+          <h3>MARÍN GAMING 2026</h3><p class="event-ranking-place">📍 Marín · 5 y 6 de diciembre de 2026</p></div>
+          <span class="event-ranking-pill">PENDIENTE DE RESULTADOS</span>
+        </div>
+        <p class="event-ranking-note">Listado provisional de pilotos en el orden de la clasificación general. Las posiciones y los puntos se actualizarán tras la carrera.</p>
+        <div class="event-ranking-scroll"><table class="event-ranking-table">
+          <thead><tr><th>POS.</th><th>PILOTO</th><th>PUNTOS</th></tr></thead>
+          <tbody>
+                <tr><td>01</td><td><span class="driver-bib">01</span>Iron</td><td>0 PTS</td></tr>
+                <tr><td>02</td><td><span class="driver-bib">02</span>DiegoMar</td><td>0 PTS</td></tr>
+                <tr><td>03</td><td><span class="driver-bib">09</span>P4nd4FPV</td><td>0 PTS</td></tr>
+                <tr><td>04</td><td><span class="driver-bib">10</span>Reiff</td><td>0 PTS</td></tr>
+                <tr><td>05</td><td><span class="driver-bib">05</span>Mannus</td><td>0 PTS</td></tr>
+                <tr><td>06</td><td><span class="driver-bib">06</span>Velrouss</td><td>0 PTS</td></tr>
+                <tr><td>07</td><td><span class="driver-bib">07</span>Barbasfpv</td><td>0 PTS</td></tr>
+                <tr><td>08</td><td><span class="driver-bib">11</span>Arán</td><td>0 PTS</td></tr>
+                <tr><td>09</td><td><span class="driver-bib">12</span>ULEX</td><td>0 PTS</td></tr>
+                <tr><td>10</td><td><span class="driver-bib">13</span>Celsorius</td><td>0 PTS</td></tr>
+                <tr><td>11</td><td><span class="driver-bib">14</span>JTX FPV</td><td>0 PTS</td></tr>
+                <tr><td>12</td><td><span class="driver-bib">08</span>Johnny FPV</td><td>0 PTS</td></tr>
+                <tr><td>13</td><td><span class="driver-bib">16</span>Beni44</td><td>0 PTS</td></tr>
+                <tr><td>14</td><td><span class="driver-bib">17</span>Toxofilms</td><td>0 PTS</td></tr>
+                <tr><td>15</td><td><span class="driver-bib">18</span>Jandron</td><td>0 PTS</td></tr>
+                <tr><td>16</td><td><span class="driver-bib">19</span>Barreta</td><td>0 PTS</td></tr>
+                <tr><td>17</td><td><span class="driver-bib">20</span>negrita.drone</td><td>0 PTS</td></tr>
+                <tr><td>18</td><td><span class="driver-bib">21</span>Taborda</td><td>0 PTS</td></tr>
+                <tr><td>19</td><td><span class="driver-bib">22</span>Ranger</td><td>0 PTS</td></tr>
+                <tr><td>20</td><td><span class="driver-bib">15</span>JaNo</td><td>0 PTS</td></tr>
+                <tr><td>21</td><td><span class="driver-bib">21</span>NOMBRE21</td><td>0 PTS</td></tr>
+                <tr><td>22</td><td><span class="driver-bib">22</span>NOMBRE22</td><td>0 PTS</td></tr>
+                <tr><td>23</td><td><span class="driver-bib">23</span>NOMBRE23</td><td>0 PTS</td></tr>
+                <tr><td>24</td><td><span class="driver-bib">24</span>NOMBRE24</td><td>0 PTS</td></tr>
+          </tbody>
+        </table></div>
+      </article>
+      <!-- RACE 02: orden provisional; actualizar al publicar resultados -->
+      <article class="event-ranking-card race-violet">
+        <div class="event-ranking-header">
+          <div><span class="event-ranking-kicker">RACE 02 · TEMPORADA 2026/27</span>
+          <h3>CENTRO DE OCIO A LAXE</h3><p class="event-ranking-place">📍 Vigo · 30 de enero de 2027</p></div>
+          <span class="event-ranking-pill">PENDIENTE DE RESULTADOS</span>
+        </div>
+        <p class="event-ranking-note">Listado provisional de pilotos en el orden de la clasificación general. Las posiciones y los puntos se actualizarán tras la carrera.</p>
+        <div class="event-ranking-scroll"><table class="event-ranking-table">
+          <thead><tr><th>POS.</th><th>PILOTO</th><th>PUNTOS</th></tr></thead>
+          <tbody>
+                <tr><td>01</td><td><span class="driver-bib">01</span>Iron</td><td>0 PTS</td></tr>
+                <tr><td>02</td><td><span class="driver-bib">02</span>DiegoMar</td><td>0 PTS</td></tr>
+                <tr><td>03</td><td><span class="driver-bib">09</span>P4nd4FPV</td><td>0 PTS</td></tr>
+                <tr><td>04</td><td><span class="driver-bib">10</span>Reiff</td><td>0 PTS</td></tr>
+                <tr><td>05</td><td><span class="driver-bib">05</span>Mannus</td><td>0 PTS</td></tr>
+                <tr><td>06</td><td><span class="driver-bib">06</span>Velrouss</td><td>0 PTS</td></tr>
+                <tr><td>07</td><td><span class="driver-bib">07</span>Barbasfpv</td><td>0 PTS</td></tr>
+                <tr><td>08</td><td><span class="driver-bib">11</span>Arán</td><td>0 PTS</td></tr>
+                <tr><td>09</td><td><span class="driver-bib">12</span>ULEX</td><td>0 PTS</td></tr>
+                <tr><td>10</td><td><span class="driver-bib">13</span>Celsorius</td><td>0 PTS</td></tr>
+                <tr><td>11</td><td><span class="driver-bib">14</span>JTX FPV</td><td>0 PTS</td></tr>
+                <tr><td>12</td><td><span class="driver-bib">08</span>Johnny FPV</td><td>0 PTS</td></tr>
+                <tr><td>13</td><td><span class="driver-bib">16</span>Beni44</td><td>0 PTS</td></tr>
+                <tr><td>14</td><td><span class="driver-bib">17</span>Toxofilms</td><td>0 PTS</td></tr>
+                <tr><td>15</td><td><span class="driver-bib">18</span>Jandron</td><td>0 PTS</td></tr>
+                <tr><td>16</td><td><span class="driver-bib">19</span>Barreta</td><td>0 PTS</td></tr>
+                <tr><td>17</td><td><span class="driver-bib">20</span>negrita.drone</td><td>0 PTS</td></tr>
+                <tr><td>18</td><td><span class="driver-bib">21</span>Taborda</td><td>0 PTS</td></tr>
+                <tr><td>19</td><td><span class="driver-bib">22</span>Ranger</td><td>0 PTS</td></tr>
+                <tr><td>20</td><td><span class="driver-bib">15</span>JaNo</td><td>0 PTS</td></tr>
+                <tr><td>21</td><td><span class="driver-bib">21</span>NOMBRE21</td><td>0 PTS</td></tr>
+                <tr><td>22</td><td><span class="driver-bib">22</span>NOMBRE22</td><td>0 PTS</td></tr>
+                <tr><td>23</td><td><span class="driver-bib">23</span>NOMBRE23</td><td>0 PTS</td></tr>
+                <tr><td>24</td><td><span class="driver-bib">24</span>NOMBRE24</td><td>0 PTS</td></tr>
+          </tbody>
+        </table></div>
+      </article>
+      </div>
+    </section>
 
     </main>
 
